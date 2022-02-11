@@ -1,4 +1,9 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">RecipeApp</string>
     <string name="send">Send</string>
+=======
+    <string name="app_name" translatable="false">RecipeApp</string>
+    <string name="hello">Hello</string>
+>>>>>>> cdbaf0e312452c7f0bdf95c77ac243ebb6a14263
 </resources>
