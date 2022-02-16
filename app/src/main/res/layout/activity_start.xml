@@ -70,6 +70,7 @@ tools:context=".StartActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/breakfast"
+        android:background="@drawable/btn_bg"
         android:textSize="20sp" />
 
     <Button
@@ -77,12 +78,14 @@ tools:context=".StartActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lunch"
+        android:background="@drawable/btn_bg"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonDinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
         android:text="@string/dinner"
         android:textSize="20sp" />
 </LinearLayout>
