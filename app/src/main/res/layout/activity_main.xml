@@ -49,12 +49,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cartoonchef" />
+        app:srcCompat="@drawable/matchrecipe" />
 
     <Button
         android:id="@+id/buttonGetStarted"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="173dp"
+        android:layout_height="57dp"
+        android:background="@drawable/btn_bg"
         android:text="@string/get_started"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
