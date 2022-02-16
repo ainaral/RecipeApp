@@ -1,6 +1,6 @@
 # Recipe app
 
-## Members
-#  Ainara Larrañaga
-#  Prabin Dhakal
-#  Thuy Ta
+# Members
+*  Ainara Larrañaga
+*  Prabin Dhakal
+*  Thuy Ta
