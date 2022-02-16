@@ -14,4 +14,12 @@
     <string name="enjoy_cooking">Enjoy \nCooking</string>
     <string name="get_started">Get Started</string>
     <string name="meal">Delicious meal on your phone</string>
+    <string name="tvIngredients">Ingredients:</string>
+    <string name="listOfIngredients">2 eggs
+                2 slices of multigrain bread
+                ½ ripe avocado, stoned, peeled, mashed.</string>
+    <string name="tvInstructions">Instructions</string>
+    <string name="mealName">Avocado smash with egg</string>
+    <string name="desription">Step 1: Cook the eggs in a small saucepan of boiling water for 8 mins for set yolks or until cooked to your liking. Refresh under cold water. Peel each egg and halve lengthways.
+Step 2: Place the toast on serving plates. Spread with avocado. Arrange the egg on top of the avocado. Sprinkle with chives. Season with pepper to serve.</string>
 </resources>
