@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#0F6668"
+tools:context=".StartActivity">
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guidelineHorizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.05" />
+
+<androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guidelineVertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.05" />
+
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/textViewCook"
+    android:textColor="@color/white"
+    android:textSize="28sp"
+    android:textStyle="bold"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/textViewHi"
+    android:textColor="#EEB1BCAC"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+
+<EditText
+    android:id="@+id/editTextTextPersonName"
+    android:layout_width="374dp"
+    android:layout_height="wrap_content"
+    android:hint="@string/searchBar"
+    android:inputType="textPersonName"
+    android:textSize="25sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+<LinearLayout
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+
+    <Button
+        android:id="@+id/buttonBreakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/breakfast"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonLunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lunch"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonDinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dinner"
+        android:textSize="20sp" />
+</LinearLayout>
+
+
+<TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/popularRecipe"
+    android:textColor="@color/white"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView1"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+<Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:text="@string/seeMore"
+    app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView1"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/textView3"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+<HorizontalScrollView
+    android:id="@+id/horizontalScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarSize="1sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20sp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageAvocadoEgg"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/avocadoegg" />
+
+            <TextView
+                android:id="@+id/textAvocadoEgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="AvocadoEgg"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageSaagpaneer"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/saagpaner" />
+
+            <TextView
+                android:id="@+id/textSaagpaner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/saagpaneer"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imagePasta"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/pasta" />
+
+            <TextView
+                android:id="@+id/textPasta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/pasta"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imagePiccata"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/chickenpiccata" />
+
+            <TextView
+                android:id="@+id/textPiccata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/chicken_piccata"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/home_button" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/favourite_button" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/profile_button" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,10 @@
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
+    <string name="saagpaneer">SaagPaneer</string>
+    <string name="pasta">Pasta</string>
+    <string name="chicken_piccata">Chicken Piccata</string>
+    <string name="seeMore">View more</string>
+    <string name="enjoy_cooking">Enjoy \nCooking</string>
+    <string name="get_started">Get Started</string>
 </resources>
