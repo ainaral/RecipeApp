@@ -47,12 +47,13 @@
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="374dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50sp"
+        android:background="@drawable/circle_button"
         android:hint="@string/searchBar"
-        android:inputType="textPersonName"
+        android:textAlignment="viewStart"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
@@ -61,11 +62,11 @@
         android:layout_width="160sp"
         android:layout_height="40sp"
         android:layout_gravity="center"
-        android:layout_marginStart="112dp"
         android:layout_marginTop="184dp"
         android:background="@drawable/btn_bg"
         android:text="@string/breakfast"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
@@ -73,12 +74,12 @@
         android:id="@+id/buttonLunch"
         android:layout_width="160sp"
         android:layout_height="40sp"
-        android:layout_marginStart="112dp"
         android:layout_marginTop="240dp"
         android:background="@drawable/btn_bg"
         android:gravity="center"
         android:text="@string/lunch"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
@@ -86,12 +87,12 @@
         android:id="@+id/buttonDinner"
         android:layout_width="160sp"
         android:layout_height="40sp"
-        android:layout_marginStart="112dp"
         android:layout_marginTop="296dp"
         android:background="@drawable/btn_bg"
         android:gravity="center"
         android:text="@string/dinner"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
 
@@ -243,23 +244,26 @@
         tools:layout_editor_absoluteX="3dp">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/buttonHome"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
             android:layout_weight="1"
+            android:background="@drawable/circle_button"
             app:srcCompat="@drawable/home_button" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/buttonFavourite"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:background="@drawable/circle_button"
             android:layout_weight="1"
             app:srcCompat="@drawable/favourite_button" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/buttonProfile"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40sp"
+            android:background="@drawable/circle_button"
             android:layout_weight="1"
             app:srcCompat="@drawable/profile_button" />
     </LinearLayout>
