@@ -2,7 +2,7 @@
     <string name="app_name">RecipeApp</string>
     <string name="textViewHi">Hi,</string>
     <string name="textViewCook">What do you want to cook today ?</string>
-    <string name="searchBar">\  Search Recipes / Ingredients</string>
+    <string name="searchBar">Search Recipes / Ingredients</string>
     <string name="popularRecipe">Most Popular Recipe</string>
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
@@ -13,6 +13,11 @@
     <string name="seeMore">More</string>
     <string name="enjoy_cooking">Enjoy \nCooking</string>
     <string name="get_started">Get Started</string>
+    <string name="recipeName">Recipe Name</string>
+    <string name="recipeIngredients">Ingredients:</string>
+    <string name="recipeInstructions">Instructions:</string>
+    <string name="ingredientsList">IngredientsList</string>
+    <string name="instructions">Instructions</string>
     <string name="meal">Delicious meal on your phone</string>
     <string name="tvIngredients">Ingredients:</string>
     <string name="listOfIngredients">2 eggs
@@ -20,7 +25,7 @@
                 ½ ripe avocado, stoned, peeled, mashed.</string>
     <string name="tvInstructions">Instructions</string>
     <string name="mealName">Avocado smash with egg</string>
-    <string name="desription">Step 1: Cook the eggs in a small saucepan of boiling water for 8 mins for set yolks or until cooked to your liking. Refresh under cold water. Peel each egg and halve lengthways.
+    <string name="decsription">Step 1: Cook the eggs in a small saucepan of boiling water for 8 mins for set yolks or until cooked to your liking. Refresh under cold water. Peel each egg and halve lengthways.
 Step 2: Place the toast on serving plates. Spread with avocado. Arrange the egg on top of the avocado. Sprinkle with chives. Season with pepper to serve.</string>
     <string name="meat_loaves">Meat Loaves</string>
 </resources>

@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.421" />
 
     <TextView
-        android:id="@+id/tvIntructions"
+        android:id="@+id/tvInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvInstructions"
@@ -74,7 +74,7 @@
         android:id="@+id/tvDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/desription"
+        android:text="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
