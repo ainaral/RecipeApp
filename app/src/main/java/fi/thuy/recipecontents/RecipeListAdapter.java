@@ -1,7 +1,6 @@
 package fi.thuy.recipecontents;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,11 +19,9 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
     private Context context;
     private ArrayList <Recipe> recipeList;
 
-
     public RecipeListAdapter(Context context, ArrayList<Recipe> recipeList){
         this.context = context;
         this.recipeList = recipeList;
-
     }
 
     @NonNull

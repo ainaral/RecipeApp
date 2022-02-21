@@ -53,9 +53,9 @@ public class ThirdActivity extends AppCompatActivity {
                 String instructions = listOfRecipe.getString("instructions");
                 String ingredients = listOfRecipe.getString("ingredients");
                 String tags = listOfRecipe.getString("tags");
-
+                int image = R.drawable.chickenpiccata;
                 if (message.equals(mealType)) {
-                    recipes.addRecipe(new Recipe(i, recipeTitle, mealType, instructions, ingredients, tags));
+                    recipes.addRecipe(new Recipe(i, recipeTitle, mealType, instructions, ingredients, tags, image));
 
                 }
             }
