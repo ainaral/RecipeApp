@@ -9,12 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecipeApp">
+
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
         <activity
             android:name=".ThirdActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".StartActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

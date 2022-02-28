@@ -4,13 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#09456E"
+    android:background="#0F6668"
     tools:context=".ThirdActivity">
+
+
+    <TextView
+        android:id="@+id/textViewLookingFor"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:text="@string/looking_for"
+        android:textColor="#D9E8E6"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="45sp"
+        android:background="@drawable/circle_button"
+        android:hint="  Search by Ingredients" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageButton
+            android:id="@+id/buttonHome"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/home_button" />
+
+        <ImageButton
+            android:id="@+id/buttonFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/favourite_button" />
+
+        <ImageButton
+            android:id="@+id/buttonProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/profile_button" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45sp"
+        android:layout_marginTop="90sp"/>
 
 
 </RelativeLayout>

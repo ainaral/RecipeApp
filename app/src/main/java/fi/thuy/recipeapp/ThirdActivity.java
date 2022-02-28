@@ -1,12 +1,18 @@
 package fi.thuy.recipeapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,78 +22,89 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
 import fi.thuy.recipecontents.RecipeListAdapter;
 
-public class ThirdActivity extends AppCompatActivity {
+public class ThirdActivity extends AppCompatActivity implements RecipeListAdapter.OnCardListener{
     RecyclerView recyclerView;
     RecipeList recipes = RecipeList.getInstance();
+    RecipeListAdapter recipeListAdapter;
+    ArrayList<Recipe> breakfast = new ArrayList<>();
+    ArrayList<Recipe> lunch = new ArrayList<>();
+    ArrayList<Recipe> dinner = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Field[] drawables = R.drawable.class.getDeclaredFields();
+        String uri = "@drawable/";
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
-
-
+        Intent intentBack = new Intent(this, StartActivity.class );
+        ImageButton btnHome = findViewById(R.id.buttonHome);
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentBack);
+                ThirdActivity.this.finish();
+                intentBack.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            }
+        });
         Intent intent = getIntent();
         String message = intent.getStringExtra( "key");
 
-        recyclerView = findViewById(R.id .recyclerView);
+        TextView textView = findViewById(R.id.textViewLookingFor);
+
+        textView.setText(getString(R.string.looking_for, message));
+
+        recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        try {
-            JSONObject jsonObject = new JSONObject((fetchJsonData()));
-            JSONArray jsonArray = jsonObject.getJSONArray("recipesList");
-
-            for(int i = 0; i < jsonArray.length(); i++) {
-
-                Log.d("Message", message);
-                JSONObject listOfRecipe = jsonArray.getJSONObject(i);
-                String recipeTitle = listOfRecipe.getString("title");
-                String mealType = listOfRecipe.getString("mealtype");
-                String instructions = listOfRecipe.getString("instructions");
-                String ingredients = listOfRecipe.getString("ingredients");
-                String tags = listOfRecipe.getString("tags");
-                int image = R.drawable.chickenpiccata;
-                if (message.equals(mealType)) {
-                    recipes.addRecipe(new Recipe(i, recipeTitle, mealType, instructions, ingredients, tags, image));
-
-                }
-            }
-            Log.d("Key", message);
-
-            }catch (Exception e){
-                e.printStackTrace();
-        }
-
-
-        RecipeListAdapter recipeListAdapter = new RecipeListAdapter(ThirdActivity.this, recipes.getListOfRecipes());
+        recipeListAdapter = new RecipeListAdapter(ThirdActivity.this, recipes.getListOfRecipes(), this);
         recyclerView.setAdapter(recipeListAdapter);
 
     }
 
+    @Override
+    public void onCardClick(int position) {
+        ArrayList<String> ingredient = new ArrayList<>();
+        ArrayList<String> instruction = new ArrayList<>();
+        Recipe recipe = recipes.getListOfRecipes().get(position);
 
+        Intent intent = new Intent(this, DetailActivity.class );
 
-    private String fetchJsonData() {
-        recipes.clear();
-        String json;
-        try {
-            InputStream inputStream = getAssets().open("recipeList.json");
-            int sizeOfFile = inputStream.available();
-            byte[] bufferData = new byte[sizeOfFile];
-            inputStream.read(bufferData);
-            inputStream.close();
-            json = new String(bufferData,"UTF-8");
+        intent.putExtra("Image", recipe.getImage());
+        intent.putExtra("Title", recipe.getRecipeName() );
+        intent.putExtra("Instructions", recipe.getInstructions());
+        intent.putExtra("Serving", recipe.getServing());
+        intent.putExtra("Time", recipe.getTime());
+        intent.putExtra("calories", recipe.getCalories());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-            return  null;
+        String ingredients= recipe.getIngredients();
+        String instructions = recipe.getInstructions();
+
+        String[] partsIngredients =  ingredients.split(",");
+        String[] partsInstructions = instructions.split(",");
+
+        for(String p: partsIngredients) {
+            p = p.replace("\"", "");
+            p = p.replace("[","");
+            p = p.replace("]","");
+            ingredient.add(p);
         }
-        return json;
+
+        for(String ins: partsInstructions) {
+            ins = ins.replace("\"", "");
+            ins = ins.replace("[","");
+            ins = ins.replace("]","");
+            instruction.add(ins);
+        }
+
+        intent.putExtra("Ingredients",ingredient);
+        intent.putExtra("Instructions",instruction);
+        startActivity(intent);
     }
 }
