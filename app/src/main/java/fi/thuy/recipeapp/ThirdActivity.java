@@ -33,10 +33,6 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
     RecyclerView recyclerView;
     RecipeList recipes = RecipeList.getInstance();
     RecipeListAdapter recipeListAdapter;
-    ArrayList<Recipe> breakfast = new ArrayList<>();
-    ArrayList<Recipe> lunch = new ArrayList<>();
-    ArrayList<Recipe> dinner = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         String uri = "@drawable/";

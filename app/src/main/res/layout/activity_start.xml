@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="240sp"
+        android:layout_marginTop="230sp"
         android:background="@drawable/btn_bg"
         android:layout_marginStart="10sp"
         android:text="@string/breakfast"
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"
         android:gravity="center"
-        android:layout_marginTop="310sp"
+        android:layout_marginTop="300sp"
         android:text="@string/lunch"
         android:layout_marginStart="10sp"
         android:textSize="20sp"/>
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"
         android:gravity="center"
-        android:layout_marginTop="380sp"
+        android:layout_marginTop="370sp"
         android:text="@string/dinner"
         android:textSize="20sp"
         android:layout_marginStart="10sp"/>
@@ -83,8 +83,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="450sp"
         android:layout_marginStart="10sp"
+        android:layout_marginTop="440sp"
+        android:weightSum="2"
         android:orientation="horizontal">
 
         <TextView
@@ -92,16 +93,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popularRecipe"
+            android:layout_weight="1"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonMore"
-            android:layout_width="50dp"
-            android:layout_marginStart="20sp"
+            android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:background="@drawable/circle_button"
+            android:layout_weight="1"
+            android:background="#0F6668"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:text="@string/seeMore" />
     </LinearLayout>
 

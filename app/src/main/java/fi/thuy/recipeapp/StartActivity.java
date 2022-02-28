@@ -87,7 +87,41 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
     @Override
     public void onCardClick(int position) {
+        ArrayList<String> ingredient = new ArrayList<>();
+        ArrayList<String> instruction = new ArrayList<>();
+        Recipe recipe = listOfRecipe.get(position);
+        Intent intent = new Intent(this, DetailActivity.class );
 
+        intent.putExtra("Image", recipe.getImage());
+        intent.putExtra("Title", recipe.getRecipeName() );
+        intent.putExtra("Instructions", recipe.getInstructions());
+        intent.putExtra("Serving", recipe.getServing());
+        intent.putExtra("Time", recipe.getTime());
+        intent.putExtra("calories", recipe.getCalories());
+
+        String ingredients= recipe.getIngredients();
+        String instructions = recipe.getInstructions();
+
+        String[] partsIngredients =  ingredients.split(",");
+        String[] partsInstructions = instructions.split(",");
+
+        for(String p: partsIngredients) {
+            p = p.replace("\"", "");
+            p = p.replace("[","");
+            p = p.replace("]","");
+            ingredient.add(p);
+        }
+
+        for(String ins: partsInstructions) {
+            ins = ins.replace("\"", "");
+            ins = ins.replace("[","");
+            ins = ins.replace("]","");
+            instruction.add(ins);
+        }
+
+        intent.putExtra("Ingredients",ingredient);
+        intent.putExtra("Instructions",instruction);
+        startActivity(intent);
     }
 
     private class MyClick implements View.OnClickListener{
@@ -168,7 +202,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
                     listOfRecipe.add(recipe);
                 }
             }
-        //start next activity if some button is clicked (if view is not null)
+        //start next activity if  button is clicked (if view is not null)
         }else{
             startActivity(intent);
         }

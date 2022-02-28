@@ -28,7 +28,7 @@ public class RecipeListAdapterStart extends RecyclerView.Adapter<RecipeListAdapt
     @Override
     public MyViewClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // inflate the item Layout
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_start, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_for_start_activity, parent,false);
         //pass view to viewHolder of StartActivity class
         return new MyViewClass(view, mOnCardListener);
     }
