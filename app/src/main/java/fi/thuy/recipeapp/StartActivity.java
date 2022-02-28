@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Random;
 
 import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
@@ -28,6 +30,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
     RecyclerView recyclerView1;
     RecipeList recipes = RecipeList.getInstance();
     RecipeListAdapterStart recipeListAdapterStart;
+    ArrayList<Recipe> listOfRecipe = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,23 +50,25 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         btnDinner.setOnClickListener(myClick);
         btnMore.setOnClickListener(myClick);
 
+        // get the reference of RecyclerView
         recyclerView1 = findViewById(R.id.recyclerViewStart);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        // set a LinearLayoutManager with horizontal orientation
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        //fill the recyclerView with horizontal linearLayoutManager
         recyclerView1.setLayoutManager(linearLayoutManager);
 
-        recipeListAdapterStart = new RecipeListAdapterStart(StartActivity.this, recipes.getListOfRecipes(),this);
+        //  call the constructor of RecipeListAdapterStart to send the reference and data to Adapter
+        recipeListAdapterStart = new RecipeListAdapterStart(StartActivity.this,listOfRecipe,this::onCardClick);
+        //set the adapter to recycler view
         recyclerView1.setAdapter(recipeListAdapterStart);
-
         updateUI(null);
 
     }
 
     @Nullable
     private String fetchJsonData() {
-        recipeListAdapterStart.notifyDataSetChanged();
         recipes.clear();
-        recyclerView1.getRecycledViewPool().clear();
-
         String json;
         try {
             InputStream inputStream = getAssets().open("recipeList.json");
@@ -79,7 +84,6 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         }
         return json;
     }
-
 
     @Override
     public void onCardClick(int position) {
@@ -102,8 +106,8 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
             JSONObject jsonObject = new JSONObject((fetchJsonData()));
             JSONArray jsonArray = jsonObject.getJSONArray("recipesList");
 
+            //fetch the recipe from json file and stores it in a arraylist
             for (int i = 0; i < jsonArray.length(); i++) {
-
                 JSONObject listOfRecipe = jsonArray.getJSONObject(i);
                 String recipeTitle = listOfRecipe.getString("title");
                 int id = listOfRecipe.getInt("id");
@@ -116,6 +120,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
                 String calories = listOfRecipe.getString("energy");
 
                 int imageResource = getResources().getIdentifier(uri + "a" + listOfRecipe.getString("id"), null, getPackageName());
+
                 if(null == view){
                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
 
@@ -150,13 +155,23 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         }catch (Exception e){
             e.printStackTrace();
         }
-
+        //update the main page(startActivity) with random recipe if view is null
         if(view == null){
+            Random random = new Random();
 
+            for (int i = 0; i < recipes.getListOfRecipes().size()/2; i++) {
+                int randomNum = random.nextInt( recipes.getListOfRecipes().size() -  recipes.getListOfRecipes().size()/2);
+                Recipe recipe = recipes.getListOfRecipes().get(randomNum);
+
+                //Stores the random recipe in a temporary arraylist
+                if(!(listOfRecipe.contains(recipe))){
+                    listOfRecipe.add(recipe);
+                }
+            }
+        //start next activity if some button is clicked (if view is not null)
         }else{
             startActivity(intent);
         }
-
 
 
     }

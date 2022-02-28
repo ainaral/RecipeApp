@@ -2,42 +2,28 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardView"
-    android:layout_width="match_parent"
-    android:layout_height="180sp"
-    android:layout_marginHorizontal="10sp"
-    android:layout_centerInParent = "true"
-    android:layout_margin="10sp"
-    android:layout_marginBottom="5sp"
+    android:layout_width="170sp"
+    android:layout_height="170sp"
+    android:layout_marginEnd="10sp"
     app:cardBackgroundColor="#1F9497"
-    app:cardCornerRadius="40sp"
-    app:cardElevation="16sp">
+    app:cardCornerRadius="250sp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="170dp"
-        android:layout_height="match_parent"
-        app:cardCornerRadius="250dp"
-        android:layout_marginStart="95sp"
-        android:layout_gravity="center">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="180sp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="fitXY" />
-
-    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="fitXY" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="180sp"
-        android:layout_marginTop="15sp"
         android:textStyle="bold"
+        android:layout_gravity="center_vertical"
         android:fontFamily="sans-serif"
-        android:textColor="@android:color/black"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
 

@@ -59,17 +59,21 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
 
         textView.setText(getString(R.string.looking_for, message));
 
+        // get the reference of RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
 
+        //call the constructor of RecipeListAdapter to send the reference and data to Adapter
         recipeListAdapter = new RecipeListAdapter(ThirdActivity.this, recipes.getListOfRecipes(), this);
+        //set the adapter to recycler view
         recyclerView.setAdapter(recipeListAdapter);
 
     }
 
     @Override
     public void onCardClick(int position) {
+        //opens new activity when each individual card is clicked
         ArrayList<String> ingredient = new ArrayList<>();
         ArrayList<String> instruction = new ArrayList<>();
         Recipe recipe = recipes.getListOfRecipes().get(position);

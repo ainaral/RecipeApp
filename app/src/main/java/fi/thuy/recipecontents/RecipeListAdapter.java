@@ -27,8 +27,9 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
     @NonNull
     @Override
     public MyViewClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row, parent,false);
-        View view2 = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_start, parent,false);
+        // inflate the item Layout
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_detail, parent,false);
+        //pass view to viewholder of ThirdActivity class
         return new MyViewClass(view, mOnCardListener);
     }
 
@@ -55,6 +56,8 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
 
         public MyViewClass(View item, OnCardListener onCardListener){
             super(item);
+
+            // get the reference of item view's
             title = (TextView) item.findViewById(R.id.textViewTitle);
             image = (ImageView) item.findViewById(R.id.imageView);
             serving = (TextView) item.findViewById(R.id.tvServing);
