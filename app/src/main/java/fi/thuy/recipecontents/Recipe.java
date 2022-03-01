@@ -10,8 +10,11 @@ public class Recipe {
     private String ingredients;
     private String tags;
     private int image;
+    private String serving;
+    private String time;
+    private String calories;
 
-    public Recipe(int id, String recipeName, String mealType, String instructions, String ingredients, String tags, int image) {
+    public Recipe(int id, String recipeName, String mealType, String instructions, String ingredients, String tags, int image,String serving,  String time,String calories) {
         this.id = id;
         this.recipeName = recipeName;
         this.mealType = mealType;
@@ -19,16 +22,11 @@ public class Recipe {
         this.ingredients = ingredients;
         this.tags = tags;
         this.image = image;
+        this.serving = serving;
+        this.time = time;
+        this.calories = calories;
     }
 
-    public Recipe(int id, String recipeName, String mealType, String instructions, String ingredients, String tags) {
-        this.id = id;
-        this.recipeName = recipeName;
-        this.mealType = mealType;
-        this.instructions = instructions;
-        this.ingredients = ingredients;
-        this.tags = tags;
-    }
 
     public int getId() {
         return id;
@@ -56,6 +54,18 @@ public class Recipe {
 
     public int getImage() {
         return image;
+    }
+
+    public String getServing() {
+        return serving;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public String getCalories() {
+        return calories;
     }
 }
 
