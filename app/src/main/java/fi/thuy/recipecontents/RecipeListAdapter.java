@@ -77,4 +77,9 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
     public interface OnCardListener{
         void onCardClick(int position);
     }
+
+    public void filterList(ArrayList<fi.thuy.recipecontents.Recipe> filteredList) {
+        recipeList = filteredList;
+        notifyDataSetChanged();
+    }
 }

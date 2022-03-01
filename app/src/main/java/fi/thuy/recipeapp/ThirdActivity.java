@@ -9,8 +9,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -24,6 +27,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Locale;
 
 import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
@@ -64,6 +68,24 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
         recipeListAdapter = new RecipeListAdapter(ThirdActivity.this, recipes.getListOfRecipes(), this);
         //set the adapter to recycler view
         recyclerView.setAdapter(recipeListAdapter);
+
+        EditText editText = findViewById(R.id.searchByIngredients);
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                search(editable.toString());
+            }
+        });
 
     }
 
@@ -107,4 +129,17 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
         intent.putExtra("Instructions",instruction);
         startActivity(intent);
     }
+
+    private void search(String text) {
+        ArrayList<fi.thuy.recipecontents.Recipe> searchList = new ArrayList<>();
+
+        for (fi.thuy.recipecontents.Recipe item : recipes.getListOfRecipes()) {
+            if (item.getRecipeName().toLowerCase().contains(text.toLowerCase())) {
+                searchList.add(item);
+            }
+        }
+
+        recipeListAdapter.filterList(searchList);
+    }
+
 }

@@ -59,7 +59,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         recyclerView1.setLayoutManager(linearLayoutManager);
 
         //  call the constructor of RecipeListAdapterStart to send the reference and data to Adapter
-        recipeListAdapterStart = new RecipeListAdapterStart(StartActivity.this,listOfRecipe,this::onCardClick);
+        recipeListAdapterStart = new RecipeListAdapterStart(StartActivity.this, listOfRecipe, this::onCardClick);
         //set the adapter to recycler view
         recyclerView1.setAdapter(recipeListAdapterStart);
         updateUI(null);
@@ -76,11 +76,11 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
             byte[] bufferData = new byte[sizeOfFile];
             inputStream.read(bufferData);
             inputStream.close();
-            json = new String(bufferData,"UTF-8");
+            json = new String(bufferData, "UTF-8");
 
         } catch (IOException e) {
             e.printStackTrace();
-            return  null;
+            return null;
         }
         return json;
     }
@@ -90,41 +90,41 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         ArrayList<String> ingredient = new ArrayList<>();
         ArrayList<String> instruction = new ArrayList<>();
         Recipe recipe = listOfRecipe.get(position);
-        Intent intent = new Intent(this, DetailActivity.class );
+        Intent intent = new Intent(this, DetailActivity.class);
 
         intent.putExtra("Image", recipe.getImage());
-        intent.putExtra("Title", recipe.getRecipeName() );
+        intent.putExtra("Title", recipe.getRecipeName());
         intent.putExtra("Instructions", recipe.getInstructions());
         intent.putExtra("Serving", recipe.getServing());
         intent.putExtra("Time", recipe.getTime());
         intent.putExtra("calories", recipe.getCalories());
 
-        String ingredients= recipe.getIngredients();
+        String ingredients = recipe.getIngredients();
         String instructions = recipe.getInstructions();
 
-        String[] partsIngredients =  ingredients.split(",");
+        String[] partsIngredients = ingredients.split(",");
         String[] partsInstructions = instructions.split(",");
 
-        for(String p: partsIngredients) {
+        for (String p : partsIngredients) {
             p = p.replace("\"", "");
-            p = p.replace("[","");
-            p = p.replace("]","");
+            p = p.replace("[", "");
+            p = p.replace("]", "");
             ingredient.add(p);
         }
 
-        for(String ins: partsInstructions) {
+        for (String ins : partsInstructions) {
             ins = ins.replace("\"", "");
-            ins = ins.replace("[","");
-            ins = ins.replace("]","");
+            ins = ins.replace("[", "");
+            ins = ins.replace("]", "");
             instruction.add(ins);
         }
 
-        intent.putExtra("Ingredients",ingredient);
-        intent.putExtra("Instructions",instruction);
+        intent.putExtra("Ingredients", ingredient);
+        intent.putExtra("Instructions", instruction);
         startActivity(intent);
     }
 
-    private class MyClick implements View.OnClickListener{
+    private class MyClick implements View.OnClickListener {
 
         @Override
         public void onClick(View view) {
@@ -132,7 +132,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         }
     }
 
-    private void updateUI(View view){
+    private void updateUI(View view) {
         String uri = "@drawable/";
         Intent intent = new Intent(this, ThirdActivity.class);
 
@@ -155,58 +155,57 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
                 int imageResource = getResources().getIdentifier(uri + "a" + listOfRecipe.getString("id"), null, getPackageName());
 
-                if(null == view){
+                if (null == view) {
                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
 
-                }else if(view.getId() == R.id.buttonBreakfast){
-                    if(mealType.equals("Breakfast")){
+                } else if (view.getId() == R.id.buttonBreakfast) {
+                    if (mealType.equals("Breakfast")) {
                         recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
                         intent.putExtra("key", "Breakfast");
                     }
 
-                }else if(view.getId() == R.id.buttonLunch){
-                    if(mealType.equals("Lunch")){
+                } else if (view.getId() == R.id.buttonLunch) {
+                    if (mealType.equals("Lunch")) {
                         recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
                         intent.putExtra("key", "Lunch");
                     }
 
-                }else if(view.getId() == R.id.buttonDinner){
-                    if(mealType.equals("Dinner")){
+                } else if (view.getId() == R.id.buttonDinner) {
+                    if (mealType.equals("Dinner")) {
                         recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
                         intent.putExtra("key", "Dinner");
                     }
 
-                }else if(view.getId() == R.id.buttonMore){
+                } else if (view.getId() == R.id.buttonMore) {
                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
                     intent.putExtra("key", "More");
 
-                 }else{
-                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
-                 }
+                } else {
+                    recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories));
+                }
 
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         //update the main page(startActivity) with random recipe if view is null
-        if(view == null){
+        if (view == null) {
             Random random = new Random();
 
-            for (int i = 0; i < recipes.getListOfRecipes().size()/2; i++) {
-                int randomNum = random.nextInt( recipes.getListOfRecipes().size() -  recipes.getListOfRecipes().size()/2);
+            for (int i = 0; i < recipes.getListOfRecipes().size() / 2; i++) {
+                int randomNum = random.nextInt(recipes.getListOfRecipes().size() - recipes.getListOfRecipes().size() / 2);
                 Recipe recipe = recipes.getListOfRecipes().get(randomNum);
 
                 //Stores the random recipe in a temporary arraylist
-                if(!(listOfRecipe.contains(recipe))){
+                if (!(listOfRecipe.contains(recipe))) {
                     listOfRecipe.add(recipe);
                 }
             }
-        //start next activity if  button is clicked (if view is not null)
-        }else{
+            //start next activity if  button is clicked (if view is not null)
+        } else {
             startActivity(intent);
         }
-
 
     }
 }

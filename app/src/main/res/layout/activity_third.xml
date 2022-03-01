@@ -18,6 +18,7 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/searchByIngredients"
         android:layout_width="match_parent"
         android:layout_height="40sp"
         android:layout_marginTop="45sp"

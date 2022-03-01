@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,20 +7,16 @@
     android:background="#0F6668"
     tools:context=".StartActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineHorizontal"
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.05" />
-
+        android:text="@string/textViewHi"
+        android:textColor="#EEB1BCAC"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="40sp"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView"
@@ -29,244 +25,128 @@
         android:text="@string/textViewCook"
         android:textColor="@color/white"
         android:textSize="28sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="80sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewHi"
-        android:textColor="#EEB1BCAC"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="374dp"
-        android:layout_height="50sp"
-        android:background="@drawable/circle_button"
-        android:hint="@string/searchBar"
-        android:textAlignment="viewStart"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextTextPersonName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="45sp"-->
+<!--        android:layout_marginStart="10sp"-->
+<!--        android:layout_marginTop="160sp"-->
+<!--        android:background="@drawable/circle_button"-->
+<!--        android:hint="@string/searchBar"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textSize="25sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView" />-->
 
     <Button
         android:id="@+id/buttonBreakfast"
-        android:layout_width="160sp"
-        android:layout_height="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="184dp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="230sp"
         android:background="@drawable/btn_bg"
         android:text="@string/breakfast"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/buttonLunch"
-        android:layout_width="160sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="240dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_bg"
         android:gravity="center"
+        android:layout_marginTop="300sp"
         android:text="@string/lunch"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
+        android:layout_marginStart="10sp"
+        android:textSize="20sp"/>
 
     <Button
         android:id="@+id/buttonDinner"
-        android:layout_width="160sp"
-        android:layout_height="40sp"
-        android:layout_marginTop="296dp"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:text="@string/dinner"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toTopOf="@+id/guidelineHorizontal" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/popularRecipe"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.094"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
-
-    <Button
-        android:id="@+id/buttonMore"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:background="@drawable/circle_button"
-        android:text="@string/seeMore"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbarSize="1sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDinner">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imageAvocadoEgg"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/avocadoegg" />
-
-                <TextView
-                    android:id="@+id/textAvocadoEgg"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="AvocadoEgg"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imageSaagpaneer"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/saagpaner" />
-
-                <TextView
-                    android:id="@+id/textSaagpaner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/saagpaneer"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imagePasta"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/pasta" />
-
-                <TextView
-                    android:id="@+id/textPasta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/pasta"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageButton
-                    android:id="@+id/imagePiccata"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:scaleType="fitCenter"
-                    app:srcCompat="@drawable/chickenpiccata" />
-
-                <TextView
-                    android:id="@+id/textPiccata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/chicken_piccata"
-                    android:textColor="@color/white"
-                    android:textSize="15sp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:layout_marginTop="370sp"
+        android:text="@string/dinner"
+        android:textSize="20sp"
+        android:layout_marginStart="10sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="3dp">
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="440sp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popularRecipe"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonMore"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#0F6668"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/seeMore" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewStart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="490sp"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_700"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/buttonHome"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="40sp"
             android:layout_weight="1"
-            android:background="@drawable/circle_button"
+            android:background="@color/black"
             app:srcCompat="@drawable/home_button" />
 
         <ImageButton
             android:id="@+id/buttonFavourite"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="40sp"
-            android:background="@drawable/circle_button"
             android:layout_weight="1"
+            android:background="@color/black"
             app:srcCompat="@drawable/favourite_button" />
 
         <ImageButton
             android:id="@+id/buttonProfile"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="40sp"
-            android:background="@drawable/circle_button"
             android:layout_weight="1"
+            android:background="@color/black"
             app:srcCompat="@drawable/profile_button" />
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
