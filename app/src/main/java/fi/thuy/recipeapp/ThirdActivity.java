@@ -35,8 +35,8 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
     RecipeListAdapter recipeListAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        String uri = "@drawable/";
         super.onCreate(savedInstanceState);
+        String uri = "@drawable/";
         setContentView(R.layout.activity_third);
         Intent intentBack = new Intent(this, StartActivity.class );
         ImageButton btnHome = findViewById(R.id.buttonHome);

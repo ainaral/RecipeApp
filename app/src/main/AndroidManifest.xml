@@ -21,7 +21,7 @@
         <activity
             android:name=".StartActivity"
             android:exported="false"
-            android:parentActivityName=".ThirdActivity"/>
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
