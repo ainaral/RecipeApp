@@ -5,6 +5,7 @@
     "title": "Chicken Piccata",
     "mealtype": "Dinner",
     "source": "Internet",
+    "category" : "Italian",
     "serving": "1 serving",
     "time": "30 min ",
     "energy": "200 calories",
@@ -35,7 +36,7 @@
     "tags": [
       "flour",
       "chicken",
-      "butter "
+      "butter"
     ]
   },
     {
@@ -44,6 +45,7 @@
      "mealtype": "Dinner",
      "serving" : "3 servings",
      "time": "25 min ",
+      "category" :"Italian",
       "energy": "210 calories",
      "source": "Net", "instructions": ["In a large bowl whisk egg and milk",
       "Stir in the cheese & oats & onion and salt",
@@ -78,6 +80,7 @@
       "mealtype": "Dinner",
       "serving": "2 servings",
       "time": "20 min ",
+      "category" :"Italian",
       "energy": "190 calories",
       "source": "Net",
       "instructions": [
@@ -122,6 +125,7 @@
       "mealtype": "Dinner",
       "serving": "2 servings",
       "time": "15 min ",
+      "category" :"Soup",
       "energy": "220 calories",
       "source": "Net",
       "instructions": ["Combine tomatoes juice and or possibly stock in saucepan",
@@ -152,6 +156,7 @@
       "mealtype": "Dinner",
       "serving": "3 servings",
       "time": "20 min ",
+      "category" :"England",
       "energy": "250 calories",
       "source": "Net",
       "instructions": ["Place beef roast in crock pot.",
@@ -177,6 +182,7 @@
       "title": "Roasted Asparagus",
       "mealtype": "Dinner",
       "serving": "2 servings",
+      "category" :"Salad",
       "time": "20 min ",
       "energy": "300 calories",
       "source": "Net",
@@ -198,7 +204,8 @@
       ],
       "tags": [
         "asparagus",
-        "olive oil"
+        "olive oil",
+        "salt"
       ],
       "imageURL": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
     },
@@ -208,6 +215,7 @@
       "mealtype": "Lunch",
       "serving": "2 servings",
       "time": "30 min ",
+      "category" :"Indian",
       "energy": "400 calories",
       "source": "Net",
       "instructions": ["Bring broth to a low boil.",
@@ -219,15 +227,16 @@
       "ingredients": [
         "beef broth",
         "dried green lentils",
-        "basmati rice",
-        "curry powder",
-        "salt"
+        "rice",
+        "salt",
+        "curry powder"
       ],
       "tags": [
         "beef",
         "rice",
         "lentils",
-        "curry powder"
+        "curry powder",
+        "salt"
       ],
       "imageURL": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg"
     },
@@ -237,25 +246,26 @@
       "mealtype": "Breakfast",
       "serving": "3 servings",
       "time": "40 min ",
+      "category" :"England",
       "energy": "450 calories",
       "source": "Net",
       "instructions": [ "Filling: In saucepan bring blueberries sugar and orange juice to boil reduce heat and simmer until tender about 10 minutes.",
         "Whisk cornstarch with 2 tbsp (25 mL) water whisk into blueberries and boil stirring until thickened about 1 minute.",
         "Place plastic wrap directly on surface refrigerate until cooled about 1 hour.",
-        "In large bowl, whisk together oats, flour, sugar, orange rind and salt with pastry blender cut in butter until in coarse crumbs.",
+        "In large bowl whisk together oats flour sugar orange rind and salt with pastry blender cut in butter until in coarse crumbs.",
         "Press half into 8-inch (2 L) square parchment paper–lined metal cake pan; spread with blueberry filling.",
         "Bake in centre of 350°F oven until light golden about 45 minutes.",
         "Let cool on rack before cutting into squares.",
-        "Make-ahead: Cover and refrigerate for up to 2 days or overwrap with heavy-duty foil and freeze for up to 2 weeks."
+        "Make-ahead: Cover and refrigerate for up to 2 days or over wrap with heavy-duty foil and freeze for up to 2 weeks."
       ],
       "ingredients": [
-        "rolled oats",
+        "oats",
         "flour",
         "grated orange rind",
         "salt",
-        "cold butter",
-        "packed brown sugar",
-        "fresh blueberries",
+        "butter",
+        "sugar",
+        "blueberries",
         "granulated sugar",
         "orange juice",
         "cornstarch"
@@ -276,6 +286,7 @@
       "title": "Curried chicken salad",
       "mealtype": "Lunch",
       "serving": "1 serving",
+      "category" :"Salad",
       "time": "15 min ",
       "energy": "500 calories",
       "source": "Net",
@@ -316,6 +327,7 @@
       "id": 10,
       "title": "Greek Salad",
       "mealtype": "Breakfast",
+      "category" :"Salad",
       "serving": "1 serving",
       "time": "15 min ",
       "energy": "550 calories",
@@ -332,7 +344,7 @@
         "2 teaspoon kosher salt plus more to taste",
         "1 cup extra-virgin olive oil preferably Greek",
         "1 head romaine lettuce trimmed of tough stems and torn into bite-sized pieces",
-        "1 cup kalamata olives about 6oz/cup",
+        "1 cup Kalamata olives about 6oz/cup",
         "½ pound Feta cheese crumbled",
         "1 cucumber, trimmed, cut into 1 inch chunks",
         "1 1/2 cup grape tomatoes, halved",
@@ -341,7 +353,7 @@
         "Freshly ground black pepper"
       ],
       "tags": [
-        "lemon",
+        "salad",
         "garlic",
         "olive oil",
         "cheese",
@@ -357,6 +369,7 @@
       "id": 11,
       "title": "Almond Date Smoothie",
       "mealtype": "Breakfast",
+      "category" :"Diet",
       "serving": "2 servings",
       "time": "10 min ",
       "energy": "650 calories",
@@ -381,6 +394,7 @@
       "id": 12,
       "title": "Super Protein Salad",
       "mealtype": "Lunch",
+      "category" :"Salad",
       "serving": "3 servings",
       "time": "30 min ",
       "energy": "600 calories",
@@ -413,6 +427,7 @@
       "title": "The Shake",
       "mealtype": "Breakfast",
       "serving": "3 servings",
+      "category" :"Diet",
       "time": "20 min ",
       "energy": "700 calories",
       "source": "Yuri Elkaim",
@@ -440,6 +455,7 @@
       "title": "Mediterranean Scramble",
       "mealtype": "Breakfast",
       "serving": "1 serving",
+      "category" :"Diet",
       "time": "30 min ",
       "energy": "550 calories",
       "source": "Rachel Atkins",
@@ -467,6 +483,7 @@
       "title": "Sweet Mashed Potatoes",
       "mealtype": "Lunch",
       "serving": "2 servings",
+      "category" :"Diet",
       "time": "30 min ",
       "energy": "7000 calories",
       "source": "Yuri Elkaim",
@@ -493,6 +510,7 @@
       "title": "pasta",
       "mealtype": "Dinner",
       "serving": "3 servings",
+      "category" :"Italian",
       "time": "40 min ",
       "energy": "350 calories",
       "source": "Napastyle.com",

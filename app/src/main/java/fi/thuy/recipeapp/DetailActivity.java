@@ -8,16 +8,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class DetailActivity extends AppCompatActivity {
-    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        intent = getIntent();
+        Intent intent = getIntent();
 
         Bundle bundle = getIntent().getExtras();
         TextView textViewTitle = findViewById(R.id.tv_recipe_name);
@@ -38,22 +36,20 @@ public class DetailActivity extends AppCompatActivity {
         textViewCalories.setText(intent.getStringExtra("calories"));
 
         ArrayList<String> ingredients1 = (ArrayList<String>) getIntent().getSerializableExtra("Ingredients");
-        String ingredients = "";
+        StringBuilder ingredients = new StringBuilder();
         for(int i = 0 ; i < ingredients1.size(); i++){
-            ingredients += "\u2023  " + ingredients1.get(i) + "\n";
-            System.out.println(ingredients);
+            ingredients.append("\u2023  ").append(ingredients1.get(i)).append("\n");
         }
-        textViewIngredients.setText(ingredients);
+        textViewIngredients.setText(ingredients.toString());
 
         ArrayList<String> instructions1 = (ArrayList<String>) getIntent().getSerializableExtra("Instructions");
 
-        String instructions = "";
+        StringBuilder instructions = new StringBuilder();
         for(int i = 0 ; i < instructions1.size(); i++){
-            instructions += "\u2023  " + instructions1.get(i) + "\n";
-            System.out.println(instructions);
+            instructions.append("\u2023  ").append(instructions1.get(i)).append("\n");
         }
 
-        textViewInstructions.setText(instructions);
+        textViewInstructions.setText(instructions.toString());
 
     }
 

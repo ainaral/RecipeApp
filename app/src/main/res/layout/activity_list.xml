@@ -5,30 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0F6668"
-    tools:context=".ThirdActivity">
+    tools:context=".ListActivity">
 
 
     <TextView
         android:id="@+id/textViewLookingFor"
         android:layout_width="match_parent"
-        android:layout_height="40sp"
+        android:layout_height="wrap_content"
         android:text="@string/looking_for"
         android:textColor="#D9E8E6"
         android:textSize="25sp"
         android:textStyle="bold" />
 
-    <EditText
+    <SearchView
+        android:id="@+id/searchViewList"
         android:layout_width="match_parent"
-        android:layout_height="40sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_marginTop="45sp"
         android:background="@drawable/circle_button"
-        android:hint="  Search by Ingredients" />
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/searchBar"
+        android:textSize="25sp">
+
+    </SearchView>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40sp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
+        android:layout_marginTop="679sp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="3dp">
 
@@ -62,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="45sp"
-        android:layout_marginTop="90sp"/>
+        android:layout_marginTop="95sp"/>
 
 
 </RelativeLayout>

@@ -1,7 +1,5 @@
 package fi.thuy.recipecontents;
 
-import android.graphics.drawable.Drawable;
-
 public class Recipe {
     private int id;
     private String recipeName;
@@ -13,8 +11,9 @@ public class Recipe {
     private String serving;
     private String time;
     private String calories;
+    private String category;
 
-    public Recipe(int id, String recipeName, String mealType, String instructions, String ingredients, String tags, int image,String serving,  String time,String calories) {
+    public Recipe( int id, String recipeName, String mealType, String instructions, String ingredients, String tags, int image,String serving,  String time,String calories, String category) {
         this.id = id;
         this.recipeName = recipeName;
         this.mealType = mealType;
@@ -25,8 +24,8 @@ public class Recipe {
         this.serving = serving;
         this.time = time;
         this.calories = calories;
+        this.category = category;
     }
-
 
     public int getId() {
         return id;
@@ -67,5 +66,10 @@ public class Recipe {
     public String getCalories() {
         return calories;
     }
+
+    public String getCategory() {
+        return category;
+    }
+
 }
 

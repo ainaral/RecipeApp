@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import fi.thuy.recipeapp.R;
 
-public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.MyViewClass> {
+public class RecipeListAdapterListView extends RecyclerView.Adapter<RecipeListAdapterListView.MyViewClass> {
     private Context context;
     private ArrayList <Recipe> recipeList;
     private OnCardListener mOnCardListener;
 
-     public RecipeListAdapter(Context context, ArrayList<Recipe> recipeList, OnCardListener onCardListener){
+     public RecipeListAdapterListView(Context context, ArrayList<Recipe> recipeList, OnCardListener onCardListener){
         this.context = context;
         this.recipeList = recipeList;
         this.mOnCardListener = onCardListener;
@@ -31,7 +31,9 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_for_detail_actiivity, parent,false);
         //pass view to viewHolder of ThirdActivity class
         return new MyViewClass(view, mOnCardListener);
+
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull MyViewClass holder, int position) {
@@ -45,6 +47,8 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
     public int getItemCount() {
         return recipeList.size();
     }
+
+
 
     public class MyViewClass extends RecyclerView.ViewHolder implements  View.OnClickListener{
          TextView title;
@@ -77,4 +81,6 @@ public class RecipeListAdapter extends RecyclerView.Adapter<RecipeListAdapter.My
     public interface OnCardListener{
         void onCardClick(int position);
     }
+
+
 }

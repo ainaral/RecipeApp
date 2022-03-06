@@ -10,82 +10,198 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textViewHi"
-        android:textColor="#EEB1BCAC"
         android:layout_marginStart="10sp"
-        android:layout_marginTop="40sp"
-        android:textSize="30sp" />
+        android:layout_marginTop="20sp"
+        android:gravity="center"
+        android:text="@string/textViewHi"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="60sp"
+        android:gravity="center"
         android:text="@string/textViewCook"
         android:textColor="@color/white"
         android:textSize="28sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginTop="80sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+    <SearchView
+        android:id="@+id/searchViewStart"
         android:layout_width="match_parent"
-        android:layout_height="45sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="142dp"
         android:background="@drawable/circle_button"
-        android:hint="@string/searchBar"
-        android:textAlignment="viewStart"
-        android:textSize="25sp"
-        android:layout_marginStart="10sp"
-        android:layout_marginTop="160sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/searchBar"
+        android:textSize="25sp">
 
-    <Button
-        android:id="@+id/buttonBreakfast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="230sp"
-        android:background="@drawable/btn_bg"
-        android:layout_marginStart="10sp"
-        android:text="@string/breakfast"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/buttonLunch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:layout_marginTop="300sp"
-        android:text="@string/lunch"
-        android:layout_marginStart="10sp"
-        android:textSize="20sp"/>
-
-    <Button
-        android:id="@+id/buttonDinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_bg"
-        android:gravity="center"
-        android:layout_marginTop="370sp"
-        android:text="@string/dinner"
-        android:textSize="20sp"
-        android:layout_marginStart="10sp"/>
+    </SearchView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10sp"
-        android:layout_marginTop="440sp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginTop="220sp">
+        <Button
+            android:id="@+id/buttonBreakfast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_bg"
+            android:layout_weight="1"
+            android:layout_marginEnd="5sp"
+            android:text="@string/breakfast"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonLunch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginEnd="5sp"
+            android:text="@string/lunch"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonDinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/dinner"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            style="?android:attr/buttonBarButtonStyle" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:background="@color/teal_700"
+        android:layout_marginTop="295sp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:layout_marginTop="345sp"
+        android:scrollbarSize="1sp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:isScrollContainer="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonItalian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/italian"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonSalad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/salad"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonSoup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/soup"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonIndian"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/indian"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonThai"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/thai"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonChinese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_bg1"
+                android:layout_marginEnd="20sp"
+                android:text="@string/chinese"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="435sp"
         android:weightSum="2"
+        android:background="@color/teal_700"
         android:orientation="horizontal">
 
         <TextView
@@ -93,35 +209,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/popularRecipe"
-            android:layout_weight="1"
             android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:layout_weight="1"
+            android:textSize="25sp" />
 
         <Button
             android:id="@+id/buttonMore"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
+            android:background="@color/teal_700"
             android:layout_weight="1"
-            android:background="#0F6668"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:text="@string/seeMore" />
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewStart"
         android:layout_width="match_parent"
-        android:layout_marginTop="490sp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="490sp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/teal_700"
-        android:layout_marginBottom="0dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="679sp"
         android:orientation="horizontal">
 
         <ImageButton
@@ -130,7 +245,8 @@
             android:layout_height="40sp"
             android:layout_weight="1"
             android:background="@color/black"
-            app:srcCompat="@drawable/home_button" />
+            app:srcCompat="@drawable/home_button"
+            android:contentDescription="@string/home_button" />
 
         <ImageButton
             android:id="@+id/buttonFavourite"
@@ -138,7 +254,8 @@
             android:layout_height="40sp"
             android:layout_weight="1"
             android:background="@color/black"
-            app:srcCompat="@drawable/favourite_button" />
+            app:srcCompat="@drawable/favourite_button"
+            android:contentDescription="@string/favourite_button" />
 
         <ImageButton
             android:id="@+id/buttonProfile"
@@ -146,8 +263,22 @@
             android:layout_height="40sp"
             android:layout_weight="1"
             android:background="@color/black"
-            app:srcCompat="@drawable/profile_button" />
+            app:srcCompat="@drawable/profile_button"
+            android:contentDescription="@string/profile_button" />
+
     </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_button"
+        android:layout_width="match_parent"
+        android:layout_height="53sp"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="340sp"
+        android:layout_alignParentBottom="true"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/add"
+        android:contentDescription="@string/add_button">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 

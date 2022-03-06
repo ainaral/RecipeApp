@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F6668"
+    tools:context=".AddRecipeByUser">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tvRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_name"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/etRecipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Recipe Name"
+            android:background="@drawable/circle_button"
+            android:inputType="text"
+            android:layout_marginBottom="15sp"
+            android:textSize="25sp"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/meal_type"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/etMealType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="MealType"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="15sp"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cooking_time"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/etCookingTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Cooking Time"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="15sp"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/servings"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/etServing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Servings"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="15sp"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ingredients"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Ingredients"
+            android:background="@drawable/circle_button"
+            android:layout_marginBottom="15sp"
+            android:inputType="textLongMessage"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="Instructions"
+            android:background="@drawable/circle_button"
+            android:inputType="textLongMessage"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnAddRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/add_button" />
+    </LinearLayout>
+
+</RelativeLayout>
