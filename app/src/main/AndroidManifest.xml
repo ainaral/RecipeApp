@@ -11,23 +11,26 @@
         android:theme="@style/Theme.RecipeApp">
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".StartActivity"/>
         <activity
             android:name=".AddRecipeByUser"
-            android:exported="false" />
-        <activity
-            android:name="fi.thuy.recipecontents.RecipeListAdapterCategory"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".StartActivity"/>
+
         <activity
             android:name=".DetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".ListActivity"/>
         <activity
             android:name=".ListActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".StartActivity"/>
         <activity
             android:name=".StartActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

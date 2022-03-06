@@ -34,7 +34,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40sp"
-        android:layout_marginTop="679sp"
+        android:layout_marginTop="623sp"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="3dp">
 
