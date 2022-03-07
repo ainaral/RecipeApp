@@ -70,9 +70,6 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         Intent intentAddRecipe  = new Intent(this, AddRecipeByUser.class);
         btnAdd.setOnClickListener(view -> startActivity(intentAddRecipe));
 
-        Intent intentProfile = new Intent(this, ProfileActivity.class);
-        btnProfile.setOnClickListener(view -> startActivity(intentProfile));
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {

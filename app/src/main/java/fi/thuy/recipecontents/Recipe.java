@@ -27,6 +27,16 @@ public class Recipe {
         this.category = category;
     }
 
+    public Recipe(String recipeName, String mealType, String time, String serving, String calories, String ingredients, String instructions){
+        this.recipeName = recipeName;
+        this.mealType = mealType;
+        this.instructions = instructions;
+        this.calories = calories;
+        this.ingredients = ingredients;
+        this.serving = serving;
+        this.time = time;
+    }
+
     public int getId() {
         return id;
     }

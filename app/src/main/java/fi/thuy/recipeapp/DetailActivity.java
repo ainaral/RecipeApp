@@ -2,18 +2,32 @@ package fi.thuy.recipeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import fi.thuy.recipecontents.RecipeList;
+
 public class DetailActivity extends AppCompatActivity {
+    protected static final String PREFERENCE_FILE_NAME = "pref_file";
+    protected static final String PREF_KEY_TITLE= "Title";
+    private  String title;
+    SharedPreferences sp;
+    RecipeList recipes = RecipeList.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
+        sp = getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE);
+        title = sp.getString(PREF_KEY_TITLE,title);
 
         Intent intent = getIntent();
 
@@ -24,6 +38,19 @@ public class DetailActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageViewRecipe);
         int resId = bundle.getInt("Image");
         imageView.setImageResource(resId);
+
+        ImageButton buttonFav = findViewById(R.id.iconFavourite);
+
+        buttonFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sp = getSharedPreferences(PREFERENCE_FILE_NAME, Activity.MODE_PRIVATE);
+
+                SharedPreferences.Editor spEditor = sp.edit();
+                spEditor.putString(PREF_KEY_TITLE, intent.getStringExtra("Title"));
+                spEditor.apply();
+            }
+        });
 
         TextView textViewIngredients = findViewById(R.id.tv_Ingredients);
         TextView textViewInstructions = findViewById(R.id.tv_Instructions);

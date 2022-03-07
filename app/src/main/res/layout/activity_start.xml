@@ -262,9 +262,8 @@
         android:layout_alignParentBottom="true"
         app:fabSize="normal"
         app:srcCompat="@drawable/add"
-        android:contentDescription="@string/add_button">
+        android:contentDescription="@string/add_button"/>
 
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 
 

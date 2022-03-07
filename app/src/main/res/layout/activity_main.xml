@@ -30,7 +30,23 @@
     </TextView>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text=" Match \n Recipe"
+        android:textSize="70sp"
+        android:background="@drawable/btn_bg1"
+        android:onClick="move"
+        android:gravity="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/meal"

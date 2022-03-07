@@ -531,7 +531,7 @@
         "1 x 800g can Italian diced tomatoes",
         "1 tablespoon tomato paste",
         "1/3 cup chopped fresh continental parsley",
-        "1/2 teaspoon caster sugar",
+        "½ teaspoon caster sugar",
         "Salt & freshly ground black pepper",
         "400gr penne rigate"
 
@@ -541,6 +541,130 @@
         "pasta",
         "onion",
         "tomatoes"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Chow Mein",
+      "mealtype": "Lunch",
+      "serving": "4 servings",
+      "category" :"Chinese",
+      "time": "25 min ",
+      "energy": "311 calories",
+      "source": "https://www.thespruceeats.com/",
+      "instructions": ["Gather the sauce ingredients.",
+        "In a small bowl: combine the sauce ingredients. Mix well and set aside.",
+        "Gather the remaining ingredients.",
+        "Bring a large pot of water to a boil and add 1 tablespoon of salt",
+        "Add the noodles and boil for 2 minutes.",
+        "Drain the noodles and rinse well with cold water.",
+        "Place the noodles in a bowl and toss with 1 tablespoon of oil.",
+        "Heat a large nonstick pan until very hot.",
+        "Add 2 tablespoons of oil and sauté the onion and red bell pepper until just tender",
+        "Add the zucchini and mushrooms and continue to stir-fry until golden brown: about 5 minutes.",
+        "Transfer the vegetables to a bowl.",
+        "Reheat the same pan until very hot. Add the remaining 2 tablespoons of oil and sauté the ginger",
+        "Add the noodles and stir-fry until the noodles are heated through",
+        "Return the vegetables to the pan with the noodle",
+        "And continue to toss the noodles until they are well combined and heated through.",
+        "Transfer to a warmed platter. Serve immediately and enjoy."
+      ],
+      "ingredients": [
+        "2 tablespoon oyster sauce",
+        "2 tablespoons dark soy sauce",
+        "2 garlic cloves crushed",
+        "2 tablespoons rice vinegar",
+        "1 teaspoon sugar",
+        "fresh egg noodles",
+        "1 cup thinly sliced red bell pepper",
+        "1 tablespoon grated fresh ginger",
+        "2 cloves garlic, minced",
+        "5 tablespoons canola oil",
+        "½ cup thinly sliced yellow onion",
+        "1 cup thinly sliced fresh shiitake mushrooms"
+      ],
+      "tags": [
+        "noodles",
+        "onion",
+        "chow mein"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Vegetable fried Rice",
+      "mealtype": "Dinner",
+      "serving": "5 servings",
+      "category" :"Chinese",
+      "time": "25 min ",
+      "energy": "340 calories",
+      "source": "https://www.thespruceeats.com/",
+      "instructions": ["Gather the ingredients.",
+        "Heat oil in a preheated wok or sauté pan over medium-high heat. Add ginger, stir until fragrant.",
+        "Add onion stir-fry for about 2 minutes until softened.",
+        "Push the onion to the sides of the wok. Add the frozen peas or corn in the middle and stir-fry for 1 minute.",
+        "Push to sides and add red bell pepper in the middle and stir-fry for 1 minute.",
+        "Add rice in the middle of the pan. Stir until heated through.",
+        "Stir in soy sauce and pepper.",
+        "Stir in cashews.",
+        "Enjoy."
+      ],
+      "ingredients": [
+        "2 tablespoons vegetable oil",
+        "1 medium onion, diced",
+        "½  cup frozen peas, or corn, thawed",
+        "½  pepper red bell pepper, diced",
+        "3 ½  cups rice, cooked and cooled",
+        "Salt, to taste",
+        "0.75 cup cashews",
+        "1 medium green onion, finely chopped",
+        "Freshly ground black pepper to taste",
+        "Stir in green onion fry for another minute then serve."
+
+      ],
+      "tags": [
+        "peas",
+        "corn",
+        "onion",
+        "rice",
+        "pepper"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Sweet Sticky Rice",
+      "mealtype": "Dinner",
+      "serving": "4 servings",
+      "category" :"Thai",
+      "time": "30 min ",
+      "energy": "817 calories",
+      "source": "https://www.allrecipes.com/",
+      "instructions": ["Combine the rice and water in a saucepan; bring to a boil",
+        "While the rice cooks mix together 1 1/2 cups coconut milk 1 cup sugar and 1/2 teaspoon salt in a saucepan over medium heat; bring to a boil; remove from heat and set aside.",
+        "Stir the cooked rice into the coconut milk mixture; cover. Allow to cool for 1 hour.",
+        "Make a sauce by mixing together 1/2 cup coconut milk 1 tablespoon sugar 1/4 teaspoon salt and the tapioca starch in a saucepan",
+        "Place the sticky rice on a serving dish.",
+        "Arrange the mangoes on top of the rice.",
+        "Pour the sauce over the mangoes and rice.",
+        "Sprinkle with sesame seeds.",
+        "Enjoy."
+      ],
+      "ingredients": [
+        "1½ cups uncooked short-grain white rice",
+        "2 cups water",
+        "1½ cups coconut milk",
+        "1 cup white sugar",
+        "½ teaspoon salt",
+        "1 tablespoon white sugar",
+        "¼ teaspoon salt",
+        "1 tablespoon tapioca starch",
+        "3 mangoes peeled and sliced",
+        "1 tablespoon toasted sesame seeds"
+      ],
+      "tags": [
+        "rice",
+        "coconut milk",
+        "mangoes",
+        "sesame"
       ]
     }
   ]

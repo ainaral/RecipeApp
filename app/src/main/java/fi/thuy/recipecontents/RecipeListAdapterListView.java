@@ -28,7 +28,7 @@ public class RecipeListAdapterListView extends RecyclerView.Adapter<RecipeListAd
     @Override
     public MyViewClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // inflate the item Layout
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_for_detail_actiivity, parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_for_list_actiivity, parent,false);
         //pass view to viewHolder of ThirdActivity class
         return new MyViewClass(view, mOnCardListener);
 
