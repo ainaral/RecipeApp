@@ -63,6 +63,7 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
                     Recipe recipe = recipes.getListOfRecipes().get(i);
                     String[] tag = recipe.getTags().split(",");
 
+                    //if user search matches the recipe, it will be added in temporary arraylist (searchList)
                     if (recipe.getRecipeName().toLowerCase().contains(s.toLowerCase())) {
                         if (!(searchList.contains(recipe))) {
                             searchList.add(recipe);
@@ -76,6 +77,7 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
                             tags.add(t);
                         }
 
+                        //if user search matches ingredients, recipe will be added in temporary arraylist (searchList)
                         for (int j = 0; j < tags.size(); j++) {
                             if (s.contains(tags.get(j))) {
                                 if (!(searchList.contains(recipe))) {
@@ -88,13 +90,16 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
                     }
 
                 }
+
                 System.out.println(searchList.size());
+
+                //call the constructor of RecipeListAdapterListView to send the reference and data to Adapter
                 recipeListAdapter = new RecipeListAdapterListView(ListActivity.this, searchList, this::onQueryTextChange);
                 recyclerView.setAdapter(recipeListAdapter);
                 return false;
             }
 
-
+            //this method will be called when the user clicks the search results.
             public void onQueryTextChange(int i) {
                 ArrayList<String> ingredients = new ArrayList<>();
                 ArrayList<String> instructions = new ArrayList<>();
@@ -153,9 +158,11 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
 
     }
 
+
+    //this method will be called, when each individual card is clicked
     @Override
     public void onCardClick(int position) {
-        //opens new activity when each individual card is clicked
+
         ArrayList<String> ingredients = new ArrayList<>();
         ArrayList<String> instructions = new ArrayList<>();
         Recipe recipe = recipes.getListOfRecipes().get(position);
@@ -170,6 +177,8 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
         String[] partsIngredients =  recipe.getIngredients().split(",");
         String[] partsInstructions = recipe.getInstructions().split(",");
 
+        //Split the ingredients, remove unnecessary character, store it in arrayList
+        //and send it to another activity
         for(String p: partsIngredients) {
             p = p.replace("\"", "");
             p = p.replace("[","");
@@ -177,6 +186,8 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
             ingredients.add(p);
         }
 
+        //Split the instructions, remove unnecessary character, store it in arrayList
+        //and send it to another activity
         for(String ins: partsInstructions) {
             ins = ins.replace("\"", "");
             ins = ins.replace("[","");

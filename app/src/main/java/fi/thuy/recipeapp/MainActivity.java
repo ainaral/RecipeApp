@@ -11,6 +11,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+/**
+ * This is a main method which is very important
+ * for execution of program.
+ */
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MAINACTIVITY";
     @Override
@@ -26,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     *When the user cli
+     */
     private void handleStartClick(){
         Log.d(TAG,"Get Started clicked");
         Intent intent = new Intent(this, StartActivity.class);

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -53,6 +52,7 @@ public class AddRecipeByUser extends AppCompatActivity {
 
     }
 
+    //write the data in the internal storage
     public void saveData(){
         String name = etTitle.getText().toString() + "\n";
         String meal = etMeal.getText().toString() + "\n";
@@ -88,6 +88,7 @@ public class AddRecipeByUser extends AppCompatActivity {
 
     }
 
+    //read the data from the internal storage which has been saved by the user
     public void readData(){
         Intent intent = new Intent(this, ListActivity.class);
         intent.putExtra("key", "My Recipe");
@@ -120,6 +121,7 @@ public class AddRecipeByUser extends AppCompatActivity {
         }
     }
 
+    //delete the data saved in internal storage.
     public void deleteData(){
         File file = new File(getFilesDir(), FILE_NAME);
         final boolean delete = file.delete();

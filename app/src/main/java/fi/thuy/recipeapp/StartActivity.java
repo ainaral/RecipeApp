@@ -17,23 +17,27 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
+import java.util.Scanner;
 
 import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
 import fi.thuy.recipecontents.RecipeListAdapterStartView;
 
 public class StartActivity extends AppCompatActivity implements RecipeListAdapterStartView.OnCardListener {
+    protected static final String FILE_NAME = "recipeFavourite.txt";
     RecyclerView recyclerView;
     SearchView searchView;
     RecipeList recipes = RecipeList.getInstance();
     RecipeListAdapterStartView recipeListAdapterStart;
-    ArrayList<Recipe> listOfRecipe = new ArrayList<>();
+    ArrayList<Recipe> favouriteRecipeList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +56,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         Button btnMore = findViewById(R.id.buttonMore);
         FloatingActionButton btnAdd = findViewById(R.id.add_button);
         ImageButton btnProfile = findViewById(R.id.buttonProfile);
+        ImageButton btnFavourite = findViewById(R.id.buttonFavourite);
         searchView = findViewById(R.id.searchViewStart);
 
         MyClick myClick = new MyClick();
@@ -69,6 +74,20 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
         Intent intentAddRecipe  = new Intent(this, AddRecipeByUser.class);
         btnAdd.setOnClickListener(view -> startActivity(intentAddRecipe));
+        btnFavourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(StartActivity.this, ListActivity.class);
+                readData();
+                startActivity(intent);
+            }
+        });
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -98,7 +117,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         recyclerView.setLayoutManager(linearLayoutManagerStart);
 
         //  call the constructor of RecipeListAdapterStart to send the reference and data to Adapter
-        recipeListAdapterStart = new RecipeListAdapterStartView(StartActivity.this,listOfRecipe, this);
+        recipeListAdapterStart = new RecipeListAdapterStartView(StartActivity.this,favouriteRecipeList, this);
 
         //set the adapter to recycler view
         recyclerView.setAdapter(recipeListAdapterStart);
@@ -107,7 +126,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
     }
 
-    //fetch data from Assets folder
+    //fetch data from Assets folder, from JSON file
     @Nullable
     private String fetchJsonData() {
         recipes.clear();
@@ -132,7 +151,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
     public void onCardClick(int position) {
         ArrayList<String> ingredient = new ArrayList<>();
         ArrayList<String> instruction = new ArrayList<>();
-        Recipe recipe = listOfRecipe.get(position);
+        Recipe recipe = favouriteRecipeList.get(position);
         Intent intent = new Intent(this, DetailActivity.class );
 
         intent.putExtra("Image", recipe.getImage());
@@ -264,7 +283,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories, category));
                     intent.putExtra("key", "More Recipe");
 
-                }else if(view.getId() == R.id.searchViewStart){
+                }else if(view.getId() == R.id.searchViewStart) {
                     recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories, category));
                     intent.putExtra("key", "More Recipe");
 
@@ -279,7 +298,8 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         }
         //update the main page(startActivity) with random recipe if view is null
         if(view == null) {
-            Random random = new Random();
+            readData();
+            /*Random random = new Random();
 
             for (int i = 0; i < recipes.getListOfRecipes().size() / 2; i++) {
                 int randomNum = random.nextInt(recipes.getListOfRecipes().size() / 2);
@@ -289,11 +309,46 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
                 if (!(listOfRecipe.contains(recipe))) {
                     listOfRecipe.add(recipe);
                 }
-            }
+            }*/
             //start next activity if  button is clicked (if view is not null)
         }else{
             startActivity(intent);
         }
 
+    }
+
+
+    public void readData(){
+
+        try {
+            FileInputStream fileInputStream = openFileInput(FILE_NAME);
+
+            Scanner scan = new Scanner(fileInputStream);
+            while(scan.hasNextLine()) {
+                String line = scan.nextLine();
+
+                if (!line.isEmpty())
+                    for (int i = 0; i < recipes.getListOfRecipes().size(); i++) {
+                        //System.out.println(i +" : " +line);
+                        Recipe recipe = recipes.getListOfRecipes().get(i);
+                        if(recipe.getRecipeName().trim().equalsIgnoreCase(line.trim())){
+                            if(!(favouriteRecipeList.contains(recipe))) {
+                                favouriteRecipeList.add(recipe);
+                            }
+                        }
+                    }
+            }
+            System.out.println(favouriteRecipeList.size());
+
+            try {
+                fileInputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            //startActivity(intent);
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
