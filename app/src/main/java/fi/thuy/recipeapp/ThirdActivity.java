@@ -38,6 +38,7 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
         super.onCreate(savedInstanceState);
         String uri = "@drawable/";
         setContentView(R.layout.activity_third);
+
         Intent intentBack = new Intent(this, StartActivity.class );
         ImageButton btnHome = findViewById(R.id.buttonHome);
         btnHome.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +49,16 @@ public class ThirdActivity extends AppCompatActivity implements RecipeListAdapte
                 intentBack.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             }
         });
+
+        Intent intentFav = new Intent(ThirdActivity.this, FavoriteActivity.class);
+        ImageButton btnFavourite = findViewById(R.id.buttonFavourite);
+        btnFavourite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intentFav);
+            }
+        });
+
         Intent intent = getIntent();
         String message = intent.getStringExtra( "key");
 

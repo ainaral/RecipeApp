@@ -27,6 +27,9 @@ public class Recipe {
         this.calories = calories;
     }
 
+    public Recipe(String recipeName){
+        this.recipeName = recipeName;
+    }
 
     public int getId() {
         return id;

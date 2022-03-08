@@ -5,14 +5,18 @@ import androidx.annotation.NonNull;
 public class Recipe {
 
 
-    private final String recipeName;
-    private final String recipeIngredients;
-    private final String recipeInstructions;
+    private String recipeName;
+    private String recipeIngredients;
+    private String recipeInstructions;
 
     public Recipe(String recipeName, String recipeIngredients, String recipeInstructions) {
         this.recipeName = recipeName;
         this.recipeIngredients = recipeIngredients;
         this.recipeInstructions = recipeInstructions;
+    }
+
+    public Recipe(String recipeName){
+        this.recipeName = recipeName;
     }
 
     public String getRecipeName() {

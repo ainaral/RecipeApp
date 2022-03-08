@@ -42,6 +42,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         Button btnLunch = findViewById(R.id.buttonLunch);
         Button btnDinner = findViewById(R.id.buttonDinner);
         Button btnMore = findViewById(R.id.buttonMore);
+        ImageButton btnFavourite = findViewById(R.id.buttonFavourite);
 
         MyClick myClick = new MyClick();
 
@@ -49,6 +50,9 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         btnLunch.setOnClickListener(myClick);
         btnDinner.setOnClickListener(myClick);
         btnMore.setOnClickListener(myClick);
+        btnFavourite.setOnClickListener(myClick);
+
+        //btnFavourite.setOnClickListener(view -> FavoriteActivity());
 
         // get the reference of RecyclerView
         recyclerView1 = findViewById(R.id.recyclerViewStart);
@@ -209,4 +213,5 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
 
     }
+
 }

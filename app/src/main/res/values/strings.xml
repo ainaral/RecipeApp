@@ -14,5 +14,7 @@
     <string name="looking_for">\ Looking for %s,</string>
     <string name="ingredients">\  Ingredients</string>
     <string name="instructions">\  Instructions</string>
+    <string name="favorites">\  Favorites</string>
+
 
 </resources>
