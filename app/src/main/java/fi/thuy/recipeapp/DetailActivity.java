@@ -56,6 +56,7 @@ public class DetailActivity extends AppCompatActivity {
         ArrayList<String> ingredients1 = (ArrayList<String>) getIntent().getSerializableExtra("Ingredients");
 
         //list each ingredients of a recipe in a new line.
+
         StringBuilder ingredients = new StringBuilder();
         for(int i = 0 ; i < ingredients1.size(); i++){
             ingredients.append("\u2023  ").append(ingredients1.get(i)).append("\n");
@@ -74,8 +75,13 @@ public class DetailActivity extends AppCompatActivity {
         readData();
     }
 
+    /**
+     * This method is called when the user clicks the favourite
+     * button at the top right corner of the page.
+     * After that, the specific recipe/item will be added
+     * to the favourites.
+     */
     public void saveFavouriteRecipe(){
-
         buttonFav.setImageResource(R.drawable.favourite_button_red);
 
         String name = textViewTitle.getText().toString() + "\n";
@@ -95,6 +101,12 @@ public class DetailActivity extends AppCompatActivity {
         final boolean delete = file.delete();
     }
 
+    /**
+     * The favourite recipe added by the user are saved in the internal
+     * storage of the app. This method will read the recipe/item from the internally
+     * saved file and shows all the favourite recipe saved by the user.
+     * The favourite recipe can be accessed from the main page of the app.
+     */
     public void readData() {
         try {
             FileInputStream fileInputStream = openFileInput(FILE_NAME);

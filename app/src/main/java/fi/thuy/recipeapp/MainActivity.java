@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        move(null);
+        move();
 
         Button btnStart = findViewById(R.id.buttonGetStarted);
 
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *When the user cli
+     *When the user clicks the  start button
+     * it will redirect the user to next activity.
      */
     private void handleStartClick(){
         Log.d(TAG,"Get Started clicked");
@@ -39,7 +40,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void move(View view){
+    /**
+     *When the user opens the app for the first time,
+     * match recipe will do some animation.
+     */
+    public void move(){
         TextView tv = findViewById(R.id.textViewMain);
 
         Animation animation1 =
