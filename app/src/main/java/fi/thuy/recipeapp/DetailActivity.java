@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -90,6 +91,8 @@ public class DetailActivity extends AppCompatActivity {
             fileOutputStream.write(name.getBytes());
 
             fileOutputStream.close();
+            Toast.makeText(getApplicationContext(),"Saved as Favourite",Toast.LENGTH_SHORT).show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }

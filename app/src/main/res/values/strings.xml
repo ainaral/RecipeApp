@@ -8,7 +8,7 @@
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
-    <string name="seeMore">See all ></string>
+    <string name="seeMore">See all Recipes></string>
     <string name="home_button">Home Button</string>
     <string name="favourite_button">Favourite Button</string>
     <string name="profile_button">Profile Button</string>
@@ -44,6 +44,9 @@
     <string name="calories">Calories</string>
     <string name="delete_button">Delete</string>
     <string name="recipe_image">Recipe Image</string>
+    <string name="my_profile">MY Profile</string>
+    <string name="show_vegetarian_food">Show Vegetarian Food</string>
+    <string name="delete_favourite_recipe">Delete Favourite Recipe</string>
 
 
 </resources>

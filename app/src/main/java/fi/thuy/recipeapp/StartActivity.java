@@ -87,7 +87,8 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         });
 
         btnProfile.setOnClickListener(view -> {
-
+            Intent intent= new Intent(StartActivity.this, ProfileActivity.class);
+            startActivity(intent);
         });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -296,7 +297,7 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
                 }else if(view.getId() == R.id.buttonIndian){
                     if(category.equals("Indian")){
                         recipes.addRecipe(new Recipe(id, recipeTitle, mealType, instructions, ingredients, tags, imageResource, serving, time, calories,category));
-                        intent.putExtra("key", "Italian");
+                        intent.putExtra("key", "Indian");
                     }
 
                 }else if(view.getId() == R.id.buttonMore){

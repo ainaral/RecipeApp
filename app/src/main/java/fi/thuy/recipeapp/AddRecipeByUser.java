@@ -63,9 +63,9 @@ public class AddRecipeByUser extends AppCompatActivity {
     public void saveData(){
         String name = etTitle.getText().toString() + "\n";
         String meal = etMeal.getText().toString() + "\n";
-        String time = etTime.getText().toString() + "\n";
-        String serving = etServ.getText().toString()+ "\n";
-        String calories = etCalories.getText().toString() + "\n";
+        String time = etTime.getText().toString() +"\n";
+        String serving = etServ.getText().toString() +"\n";
+        String calories = etCalories.getText().toString()  +"\n";
         String ingredients = etIngredients.getText().toString() + "\n";
         String instructions = etInstruction.getText().toString()+ "\n";
 
@@ -80,6 +80,7 @@ public class AddRecipeByUser extends AppCompatActivity {
             fileOutputStream.write(instructions.getBytes());
 
             fileOutputStream.close();
+            Toast.makeText(getApplicationContext(),"Recipe Added",Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -137,6 +138,7 @@ public class AddRecipeByUser extends AppCompatActivity {
     public void deleteData(){
         File file = new File(getFilesDir(), FILE_NAME);
         final boolean delete = file.delete();
+        Toast.makeText(getApplicationContext(),"Recipe deleted",Toast.LENGTH_SHORT).show();
     }
 
 
