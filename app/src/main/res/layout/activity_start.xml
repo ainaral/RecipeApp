@@ -95,11 +95,11 @@
         android:layout_width="match_parent"
         android:layout_height="70sp"
         android:layout_marginTop="285sp"
-        android:scrollbarSize="1sp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:fillViewport="true"
         android:isScrollContainer="true"
-        android:scrollbarStyle="outsideOverlay"
-        android:fillViewport="true">
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarSize="1sp"
+        android:scrollbarStyle="outsideOverlay">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -108,75 +108,75 @@
 
             <Button
                 android:id="@+id/buttonItalian"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/italian"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonSalad"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/salad"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonSoup"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/soup"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonIndian"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/indian"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonThai"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/thai"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/buttonChinese"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_bg1"
                 android:layout_marginEnd="20sp"
+                android:background="@drawable/btn_bg1"
                 android:text="@string/chinese"
                 android:textColor="@color/black"
-                android:textSize="20sp"
-                style="?android:attr/buttonBarButtonStyle" />
+                android:textSize="20sp" />
 
         </LinearLayout>
 
