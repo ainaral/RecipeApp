@@ -25,6 +25,7 @@
     <string name="enjoy_cooking">Enjoy \nCooking</string>
     <string name="get_started">Get Started</string>
     <string name="meal">Delicious meal on your phone</string>
+    <string name="match_n_recipe">Match \n Recipe</string>
 
     <!-- List Activity -->
     <string name="looking_for">\ Looking for %s,</string>
@@ -42,7 +43,7 @@
     <string name="show_my_recipe">Show My Recipe</string>
     <string name="calories">Calories</string>
     <string name="delete_button">Delete</string>
-    <string name="match_n_recipe">Match \n Recipe</string>
+    <string name="recipe_image">Recipe Image</string>
 
 
 </resources>

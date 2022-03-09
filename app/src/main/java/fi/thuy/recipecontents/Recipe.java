@@ -1,5 +1,8 @@
 package fi.thuy.recipecontents;
 
+/**
+ * This class will provide the detail information about the recipe.
+ */
 public class Recipe {
     private int id;
     private String recipeName;
@@ -13,6 +16,20 @@ public class Recipe {
     private String calories;
     private String category;
 
+    /**
+     *
+     * @param id id of each recipe
+     * @param recipeName title or name of the recipe
+     * @param mealType type of meal, whether it is Breakfast, lunch or dinner
+     * @param instructions Instructions for making the recipe
+     * @param ingredients required ingredients for making the recipe
+     * @param tags specific word for the ingredients
+     * @param image image of the recipe
+     * @param serving how many peole can be served
+     * @param time cooking time of the recipe
+     * @param calories energy that is received from the recipe
+     * @param category category indicates the origin country of the recipe
+     */
     public Recipe( int id, String recipeName, String mealType, String instructions, String ingredients, String tags, int image,String serving,  String time,String calories, String category) {
         this.id = id;
         this.recipeName = recipeName;

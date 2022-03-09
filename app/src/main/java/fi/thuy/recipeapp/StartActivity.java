@@ -31,6 +31,11 @@ import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
 import fi.thuy.recipecontents.RecipeListAdapterStartView;
 
+
+/**
+ * This activity will allow the user to select the type of recipe they are looking for.
+ * User can also search for the recipe and find their favourite recipe.
+ */
 public class StartActivity extends AppCompatActivity implements RecipeListAdapterStartView.OnCardListener {
     protected static final String FILE_NAME = "recipeFavourite.txt";
     RecyclerView recyclerView;
@@ -74,19 +79,15 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
         Intent intentAddRecipe  = new Intent(this, AddRecipeByUser.class);
         btnAdd.setOnClickListener(view -> startActivity(intentAddRecipe));
-        btnFavourite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(StartActivity.this, ListActivity.class);
-                readData();
-                startActivity(intent);
-            }
-        });
-        btnProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
+        btnFavourite.setOnClickListener(view -> {
+            Intent intent= new Intent(StartActivity.this, ListActivity.class);
+            readData();
+            startActivity(intent);
+        });
+
+        btnProfile.setOnClickListener(view -> {
+
         });
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -126,7 +127,10 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
     }
 
-    //fetch data from Assets folder, from JSON file
+    /**
+     * @return Return the data of the JSON file which is inside the assets folder.
+     */
+
     @Nullable
     private String fetchJsonData() {
         recipes.clear();
@@ -146,7 +150,13 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         return json;
     }
 
-    //opens a new activity on each card click
+    /**
+     *
+     * @param position the position of each favourite item/recipe in the list.
+     * When each favourite recipe is clicked, onClickListener will
+     * get the position of the recipe and will display the details of specific recipe.
+     */
+
     @Override
     public void onCardClick(int position) {
         ArrayList<String> ingredient = new ArrayList<>();
@@ -167,6 +177,10 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         String[] partsIngredients =  ingredients.split(",");
         String[] partsInstructions = instructions.split(",");
 
+        /*
+        split the ingredients separated by comma(,) and store it in a
+        separate arraylist.
+         */
         for(String p: partsIngredients) {
             p = p.replace("\"", "");
             p = p.replace("[","");
@@ -174,6 +188,10 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
             ingredient.add(p);
         }
 
+        /*
+        split the instructions separated by comma(,) and store it in a
+        separate arraylist.
+         */
         for(String ins: partsInstructions) {
             ins = ins.replace("\"", "");
             ins = ins.replace("[","");
@@ -194,7 +212,9 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
         }
     }
 
-    //update UI based on the user selection
+    /**
+     * @param view update the UI based on the view parameter given by the user.
+     */
     private void updateUI(View view){
         String uri = "@drawable/";
         Intent intent = new Intent(this, ListActivity.class);
@@ -317,9 +337,12 @@ public class StartActivity extends AppCompatActivity implements RecipeListAdapte
 
     }
 
-
+    /**
+     * Read the data that has been saved in the internal storage.
+     * If the user have saved some recipe as their favourite,
+     * recipe will be updated in the main page.
+     */
     public void readData(){
-
         try {
             FileInputStream fileInputStream = openFileInput(FILE_NAME);
 

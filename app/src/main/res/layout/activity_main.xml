@@ -37,7 +37,6 @@
         android:text="@string/match_n_recipe"
         android:textSize="70sp"
         android:background="@drawable/btn_bg1"
-        android:onClick="move"
         android:gravity="center"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
