@@ -1,7 +1,6 @@
 <resources>
     <!-- Start Activity -->
     <string name="app_name">Recipe App</string>
-    <string name="textViewHi">Hi</string>
     <string name="textViewCook">What do you want to cook today ?</string>
     <string name="searchBar">Search Recipes / Ingredients</string>
     <string name="favouriteRecipe">My Favourite Recipe</string>
@@ -38,10 +37,12 @@
     <string name="mealType">Breakfast, Lunch or Dinner</string>
     <string name="cooking_time">Cooking Time (In min)</string>
     <string name="servings">Servings</string>
+    <string name="recipe_image">Image</string>
+    <string name="calories">Calories</string>
+
+    <!-- Recipe added By the User Activity -->
+    <string name="delete_button">Delete</string>
     <string name="add_recipe">Add Recipe</string>
     <string name="show_my_recipe">Show My Recipe</string>
-    <string name="calories">Calories</string>
-    <string name="delete_button">Delete</string>
-
 
 </resources>

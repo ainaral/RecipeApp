@@ -17,6 +17,10 @@ import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
 import fi.thuy.recipecontents.RecipeListAdapterListView;
 
+/**
+ * This activity will list all the recipe that the user wants too see.
+ * View of this activity will be updated based on the user selection.
+ */
 public class ListActivity extends AppCompatActivity implements RecipeListAdapterListView.OnCardListener{
     RecyclerView recyclerView;
     SearchView searchView;
@@ -39,7 +43,11 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
         TextView textView = findViewById(R.id.textViewLookingFor);
 
         if(message == null){
-            textView.setText(getString(R.string.looking_for, messageSearch));
+            if(messageSearch == null){
+                textView.setText(getString(R.string.looking_for, "Recipes"));
+            }else {
+                textView.setText(getString(R.string.looking_for, messageSearch));
+            }
         }else{
             textView.setText(getString(R.string.looking_for, message));
         }
@@ -49,6 +57,7 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
             intentBack.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         });
 
+        //sets the user input in searchView
         searchView.setQuery(messageSearch, true);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
 
@@ -100,6 +109,13 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
             }
 
             //this method will be called when the user clicks the search results.
+
+            /**
+             *
+             * @param i indicates the position of each item of the search results.
+             * When the user clicks the items in search results, it will open the
+             * detail of each item.
+             */
             public void onQueryTextChange(int i) {
                 ArrayList<String> ingredients = new ArrayList<>();
                 ArrayList<String> instructions = new ArrayList<>();
@@ -143,8 +159,6 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
 
         });
 
-
-
         // get the reference of RecyclerView
         recyclerView = findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -158,8 +172,12 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
 
     }
 
-
-    //this method will be called, when each individual card is clicked
+    /**
+     *
+     * @param position the position of each item/recipe in the list.
+     * When each individual card is clicked, onClickListener will
+     * get the position of the recipe and will display the details of specific recipe.
+     */
     @Override
     public void onCardClick(int position) {
 
@@ -177,8 +195,11 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
         String[] partsIngredients =  recipe.getIngredients().split(",");
         String[] partsInstructions = recipe.getInstructions().split(",");
 
-        //Split the ingredients, remove unnecessary character, store it in arrayList
-        //and send it to another activity
+
+        /*
+          Split the ingredients, remove unnecessary character, store it in arrayList
+          and send it to another activity
+        */
         for(String p: partsIngredients) {
             p = p.replace("\"", "");
             p = p.replace("[","");
@@ -186,8 +207,10 @@ public class ListActivity extends AppCompatActivity implements RecipeListAdapter
             ingredients.add(p);
         }
 
-        //Split the instructions, remove unnecessary character, store it in arrayList
-        //and send it to another activity
+        /*
+          Split the instructions, remove unnecessary character, store it in arrayList
+          and send it to another activity
+         */
         for(String ins: partsInstructions) {
             ins = ins.replace("\"", "");
             ins = ins.replace("[","");

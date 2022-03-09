@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,9 +15,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import fi.thuy.recipecontents.Recipe;
-import fi.thuy.recipecontents.RecipeList;
-
+/**
+ * This activity will provide the detail information about the selected recipe.
+ * All the instructions, ingredients and other related things will be shown.
+ */
 public class DetailActivity extends AppCompatActivity {
     protected static final String FILE_NAME = "recipeFavourite.txt";
     TextView textViewTitle;
@@ -38,6 +38,7 @@ public class DetailActivity extends AppCompatActivity {
         ImageView imageView = findViewById(R.id.imageViewRecipe);
         int resId = bundle.getInt("Image");
         imageView.setImageResource(resId);
+
         //readData();
         buttonFav = findViewById(R.id.iconFavourite);
         buttonFav.setImageResource(R.drawable.favourite_button);
@@ -56,7 +57,6 @@ public class DetailActivity extends AppCompatActivity {
         ArrayList<String> ingredients1 = (ArrayList<String>) getIntent().getSerializableExtra("Ingredients");
 
         //list each ingredients of a recipe in a new line.
-
         StringBuilder ingredients = new StringBuilder();
         for(int i = 0 ; i < ingredients1.size(); i++){
             ingredients.append("\u2023  ").append(ingredients1.get(i)).append("\n");
@@ -95,11 +95,11 @@ public class DetailActivity extends AppCompatActivity {
         }
     }
 
-    public void removeFromFavourite(){
+   /* public void removeFromFavourite(){
         buttonFav.setImageResource(R.drawable.favourite_button);
         File file = new File(getFilesDir(), FILE_NAME);
         final boolean delete = file.delete();
-    }
+    }*/
 
     /**
      * The favourite recipe added by the user are saved in the internal

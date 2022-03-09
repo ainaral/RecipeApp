@@ -18,6 +18,9 @@ import java.util.Scanner;
 import fi.thuy.recipecontents.Recipe;
 import fi.thuy.recipecontents.RecipeList;
 
+/**
+ * This activity will provide the feature which allow the user to add their own recipe.
+ */
 public class AddRecipeByUser extends AppCompatActivity {
 
     protected static final String FILE_NAME = "recipe.txt";
@@ -52,7 +55,9 @@ public class AddRecipeByUser extends AppCompatActivity {
 
     }
 
-    //write the data in the internal storage
+    /**
+     * Save the data in the internal storage of the app
+     */
     public void saveData(){
         String name = etTitle.getText().toString() + "\n";
         String meal = etMeal.getText().toString() + "\n";
@@ -64,7 +69,6 @@ public class AddRecipeByUser extends AppCompatActivity {
 
         try {
             FileOutputStream fileOutputStream = openFileOutput(FILE_NAME,MODE_APPEND);
-
             fileOutputStream.write(name.getBytes());
             fileOutputStream.write(meal.getBytes());
             fileOutputStream.write(time.getBytes());
@@ -78,6 +82,7 @@ public class AddRecipeByUser extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        //sets all the text field empty, once the recipe is added by the user
         etTitle.setText("");
         etMeal.setText("");
         etTime.setText("");
@@ -88,7 +93,9 @@ public class AddRecipeByUser extends AppCompatActivity {
 
     }
 
-    //read the data from the internal storage which has been saved by the user
+    /**
+     * Read the data from the internal storage which has been saved by the user
+     */
     public void readData(){
         Intent intent = new Intent(this, ListActivity.class);
         intent.putExtra("key", "My Recipe");
@@ -105,7 +112,6 @@ public class AddRecipeByUser extends AppCompatActivity {
 
             }
             for (int i = 0; i < newRecipeList.size(); i+=7) {
-
                     recipes.addRecipe(new Recipe(newRecipeList.get(i),newRecipeList.get(i+1),newRecipeList.get(i+2),newRecipeList.get(i+3),newRecipeList.get(i+4),newRecipeList.get(i+5),newRecipeList.get(i+6)));
             }
 
@@ -121,7 +127,9 @@ public class AddRecipeByUser extends AppCompatActivity {
         }
     }
 
-    //delete the data saved in internal storage.
+    /**
+     * Delete the data saved in internal storage.
+     */
     public void deleteData(){
         File file = new File(getFilesDir(), FILE_NAME);
         final boolean delete = file.delete();

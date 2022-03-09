@@ -12,8 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
- * This is a main method which is very important
- * for execution of program.
+ * This is a main activity for the program.
+ * This is the first screen the user sees.
  */
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MAINACTIVITY";

@@ -11,19 +11,37 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import fi.thuy.recipeapp.R;
 
+import fi.thuy.recipeapp.*;
+
+/**
+ * This adapter class is responsible for making a View for each item in the recipeList
+ * which will be populated in the List view activity
+ */
 public class RecipeListAdapterListView extends RecyclerView.Adapter<RecipeListAdapterListView.MyViewClass> {
     private Context context;
     private ArrayList <Recipe> recipeList;
     private OnCardListener mOnCardListener;
 
+    /**
+     *
+     * @param context used to pass the reference of the current class
+     * @param recipeList stores the list of recipe/item that needs to be populated in the listView.
+     *                   Value cannot be null.
+     * @param onCardListener  opens a new activity of a specific recipe when clicked.
+     */
      public RecipeListAdapterListView(Context context, ArrayList<Recipe> recipeList, OnCardListener onCardListener){
         this.context = context;
         this.recipeList = recipeList;
         this.mOnCardListener = onCardListener;
     }
 
+    /**
+     *
+     * @param parent inflate the item layout in the parent class
+     * @param viewType sets the ViewType of the activity.
+     * @return the new ViewHolder object containing this layout
+     */
     @NonNull
     @Override
     public MyViewClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,6 +52,11 @@ public class RecipeListAdapterListView extends RecyclerView.Adapter<RecipeListAd
 
     }
 
+    /**
+     *
+     * @param holder bind the recipes of the list recipeList which than will be shown in recycler view
+     * @param position the position of each recipes in recipeList
+     */
 
     @Override
     public void onBindViewHolder(@NonNull MyViewClass holder, int position) {
@@ -43,12 +66,14 @@ public class RecipeListAdapterListView extends RecyclerView.Adapter<RecipeListAd
         holder.time.setText(recipeList.get(position).getTime());
     }
 
+    /**
+     *
+     * @return the size of the recipeList
+     */
     @Override
     public int getItemCount() {
         return recipeList.size();
     }
-
-
 
     public class MyViewClass extends RecyclerView.ViewHolder implements  View.OnClickListener{
          TextView title;
