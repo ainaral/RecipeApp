@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,6 +14,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 import fi.thuy.recipecontents.Recipe;
@@ -61,9 +63,9 @@ public class AddRecipeByUser extends AppCompatActivity {
     public void saveData(){
         String name = etTitle.getText().toString() + "\n";
         String meal = etMeal.getText().toString() + "\n";
-        String time = etTime.getText().toString() + " min" + "\n";
-        String serving = etServ.getText().toString() + " serving" + "\n";
-        String calories = etCalories.getText().toString()+ " calories" + "\n";
+        String time = etTime.getText().toString() + "\n";
+        String serving = etServ.getText().toString()+ "\n";
+        String calories = etCalories.getText().toString() + "\n";
         String ingredients = etIngredients.getText().toString() + "\n";
         String instructions = etInstruction.getText().toString()+ "\n";
 
@@ -107,14 +109,16 @@ public class AddRecipeByUser extends AppCompatActivity {
             while(scan.hasNextLine()) {
                 String line = scan.nextLine();
 
-                if (!line.isEmpty())
+                if (!line.isEmpty()) {
                     newRecipeList.add(line);
-
+                }
             }
-            for (int i = 0; i < newRecipeList.size(); i+=7) {
-                    recipes.addRecipe(new Recipe(newRecipeList.get(i),newRecipeList.get(i+1),newRecipeList.get(i+2),newRecipeList.get(i+3),newRecipeList.get(i+4),newRecipeList.get(i+5),newRecipeList.get(i+6)));
-            }
+            if(!newRecipeList.isEmpty()){
+                for (int i = 0; i < newRecipeList.size(); i += 7) {
+                    recipes.addRecipe(new Recipe(newRecipeList.get(i), newRecipeList.get(i + 1), newRecipeList.get(i + 2), newRecipeList.get(i + 3), newRecipeList.get(i + 4), newRecipeList.get(i + 5), newRecipeList.get(i + 6)));
 
+                }
+            }
             try {
                 fileInputStream.close();
             } catch (IOException e) {
