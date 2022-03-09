@@ -16,9 +16,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import fi.thuy.recipecontents.Recipe;
-import fi.thuy.recipecontents.RecipeList;
-
 public class DetailActivity extends AppCompatActivity {
     protected static final String FILE_NAME = "recipeFavourite.txt";
     TextView textViewTitle;

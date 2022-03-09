@@ -42,6 +42,7 @@
     <string name="show_my_recipe">Show My Recipe</string>
     <string name="calories">Calories</string>
     <string name="delete_button">Delete</string>
+    <string name="match_n_recipe">Match \n Recipe</string>
 
 
 </resources>
