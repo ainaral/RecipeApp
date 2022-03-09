@@ -3,7 +3,7 @@
     <string name="app_name">Recipe App</string>
     <string name="textViewHi">Hi</string>
     <string name="textViewCook">What do you want to cook today ?</string>
-    <string name="searchBar">Search Recipes / Ingredients</string>
+    <string name="searchBar">Search Recipes</string>
     <string name="favouriteRecipe">My Favourite Recipe</string>
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
