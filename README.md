@@ -35,7 +35,7 @@ This is an android app where the user can select or type the ingredients that ar
 
 
 # Reference
-[Internal Stroage](https://www.youtube.com/watch?v=cGxHphBjTBk&ab_channel=slidenerd){:target="_blank"}
+[Internal Stroage](https://www.youtube.com/watch?v=cGxHphBjTBk&ab_channel=slidenerd)
 <br>
 [Javadoc](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/)
 <br>
@@ -80,23 +80,16 @@ This is an android app where the user can select or type the ingredients that ar
 
 
 # Recipe App UI
-<p allign = "right">
+
 <img src="Pictures/1.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400"  />
-</p>
-<p allign = "center">
 <img src="Pictures/2.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-</p>
-<img src="Pictures/3.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-<p allign = "left">
+<img src="Pictures/3.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" /
 <img src="Pictures/4.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-</p>
+
 <br>
 <img src="Pictures/5.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-
 <img src="Pictures/7.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-
 <img src="Pictures/8.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
-
 <img src="Pictures/9.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 <br>
 
