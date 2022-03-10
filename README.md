@@ -71,3 +71,6 @@ This is an android app where the user can select or type the ingredients that ar
 [Vegetable Fried Rice](https://www.thespruceeats.com/vegetable-fried-rice-695042)
 <br>
 [Sweet Sticky Rice](https://www.allrecipes.com/recipe/150313/thai-sweet-sticky-rice-with-mango-khao-neeo-mamuang/)
+
+# App UI
+<img src="Pictures/1.png" width="200" height="400">
