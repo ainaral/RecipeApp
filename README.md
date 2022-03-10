@@ -72,4 +72,4 @@ This is an android app where the user can select or type the ingredients that ar
 <br>
 [Sweet Sticky Rice](https://www.allrecipes.com/recipe/150313/thai-sweet-sticky-rice-with-mango-khao-neeo-mamuang/)
 
-![](Pictures/1.png)
+![](Pictures/1.png = 250x250)
