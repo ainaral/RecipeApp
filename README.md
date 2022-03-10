@@ -43,6 +43,8 @@ This is an android app where the user can select or type the ingredients that ar
 <br>
 [Custom buttons design - Android Studio tutorial](https://www.youtube.com/watch?v=nlPtfncjOWA&t=393s)
 <br>
+[Splash screen](https://youtu.be/TGQ0mlFDIrk)
+<br>
 [UML generation](https://plugins.jetbrains.com/plugin/15124-uml-generator )
 <br>
 [Chicken Piccata](https://www.tasteofhome.com/recipes/quick-chicken-piccata/)
