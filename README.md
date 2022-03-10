@@ -85,5 +85,5 @@ This is an android app where the user can select or type the ingredients that ar
 <br>
 
 # UML Diagram
-<br>
+
 ![](Pictures/recipe_UML.jpg)
