@@ -27,9 +27,6 @@ This is an android app where the user can select or type the ingredients that ar
 - Also, user will have an option to contribute to the application. The user can add or delete a recipe and the app will guide them to the recipe creation process.
 
 
-# UML Diagram
-![Class diagram](./recipe_app_diagram.png)
-
 # Reference
 [Javadoc](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/)
 <br>
@@ -92,4 +89,4 @@ This is an android app where the user can select or type the ingredients that ar
 <br>
 # UML Diagram
 
-<img src="Pictures/recipe_UML.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
+<img src="Pictures/recipe_UML.jpg" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
