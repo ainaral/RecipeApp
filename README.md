@@ -1,5 +1,5 @@
 # Recipe app
-This recipe app has been implemented during the mobile course
+This recipe app has been implemented during the mobile course.
 
 # Members
 *  Ainara Larrañaga
@@ -18,7 +18,7 @@ This is an android app where the user can select or type the ingredients that ar
 - Add and remove user’s recipes.
 
 # User guide
-- Users can use the app without registeration. When the user opens the app, they will have an option to choose between breakfast, lunch and dinner. 
+- Users can use the app without registration. When the user opens the app, they will have an option to choose between breakfast, lunch and dinner. 
 - After selecting the right choice, users will be served with two different options.
 - They can either select the ready-made recipes offered by the app or they will have an option to type the name of ingredients or simply select from the ingredients categories and the app will show the recipes that match the ingredients.
 - Once the user finds the recipe of their choice,  they can follow the step by step instructions for it. 
@@ -26,12 +26,11 @@ This is an android app where the user can select or type the ingredients that ar
 - User will be offered with the favourites button where the users can save their favourite recipe. So, the users don't have to search for the same recipe when they open the app again.
 - Also, user will have an option to contribute to the application. The user can add or delete a recipe and the app will guide them to the recipe creation process.
 
+# JavaDoc 
 
-# UML Diagram
-![Class diagram](./recipe_app_diagram.png)
 
 # Reference
-[Javadoc](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/)
+[Instructions for JAVAdoc](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/) {:target="_blank"}
 <br>
 [Recipes.json](https://github.com/raywenderlich/recipes/blob/master/Recipes.json)
 <br>
@@ -71,3 +70,9 @@ This is an android app where the user can select or type the ingredients that ar
 [Vegetable Fried Rice](https://www.thespruceeats.com/vegetable-fried-rice-695042)
 <br>
 [Sweet Sticky Rice](https://www.allrecipes.com/recipe/150313/thai-sweet-sticky-rice-with-mango-khao-neeo-mamuang/)
+
+
+# Recipe app UI
+
+
+
