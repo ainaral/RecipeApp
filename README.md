@@ -28,7 +28,7 @@ This is an android app where the user can select or type the ingredients that ar
 
 
 # Reference
-[Javadoc](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/)
+[Javadoc Instructions](https://www.geeksforgeeks.org/what-is-javadoc-tool-and-how-to-use-it/)
 <br>
 [Recipes.json](https://github.com/raywenderlich/recipes/blob/master/Recipes.json)
 <br>
