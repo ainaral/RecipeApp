@@ -78,7 +78,7 @@ This is an android app where the user can select or type the ingredients that ar
 <img src="Pictures/3.png" width="200" height="400">
 <img src="Pictures/6.png" width="200" height="400">
 <br>
-<img src="Pictures/7.png" width="200" height="400">
 <img src="Pictures/8.png" width="200" height="400">
 <img src="Pictures/9.png" width="200" height="400">
 <img src="Pictures/10.png" width="200" height="400">
+<img src="Pictures/11.png" width="200" height="400">
