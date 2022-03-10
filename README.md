@@ -75,5 +75,7 @@ This is an android app where the user can select or type the ingredients that ar
 
 # Recipe App UI
 <img src="Pictures/1.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
+<br>
 <img src="Pictures/2.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
+<br>
 <img src="Pictures/3.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
