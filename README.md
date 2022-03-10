@@ -71,8 +71,7 @@ This is an android app where the user can select or type the ingredients that ar
 <br>
 [Sweet Mashed Potatoes](https://cookieandkate.com/savory-mashed-sweet-potatoes/)
 <br>
-[Pasta](https://yummynotes.net/the-best-tomato-pasta-recipe/
-)
+[Pasta](https://yummynotes.net/the-best-tomato-pasta-recipe/)
 <br>
 [Vegetable Fried Rice](https://www.thespruceeats.com/vegetable-fried-rice-695042)
 <br>
