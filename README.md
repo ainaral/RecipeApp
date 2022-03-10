@@ -73,7 +73,7 @@ This is an android app where the user can select or type the ingredients that ar
 # Recipe App UI
 
 <tr>
-    <td><img src="Pictures/1.png" width=200 height=400></td>
+    <td><img src="Pictures/1.png" width=200 height=400 hspace=20></td>
     <td><img src="Pictures/2.png" width=200 height=400></td>
     <td><img src="Pictures/3.png" width=200 height=400></td>
     <td><img src="Pictures/9.png" width="200" height="400"></td>
