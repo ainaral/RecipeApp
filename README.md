@@ -81,5 +81,6 @@ This is an android app where the user can select or type the ingredients that ar
 <img src="Pictures/10.png" width="200" height="400">
 <img src="Pictures/14.png" width="200" height="400">
 <br>
-# Uml Diagram
+
+# UML Diagram
 ![UML Diagram](Pictures/recipe_UML.jpg)
