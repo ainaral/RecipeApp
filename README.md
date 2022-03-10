@@ -87,6 +87,7 @@ This is an android app where the user can select or type the ingredients that ar
 
 <img src="Pictures/9.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 <br>
+
 # UML Diagram
 
 ![](Pictures/recipe_UML.jpg)
