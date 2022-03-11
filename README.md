@@ -28,6 +28,7 @@ This is an android app where the user can select or type the ingredients that ar
 
 # Test Case Document and Javadoc
 [Java Doc](https://users.metropolia.fi/~prabind/javadoc/)
+<br>
 [Test case document](https://docs.google.com/document/d/15MCwdpB8n1kPm5es9Wj7HebcLWm0WS2cjwCa80m3sRw/edit)
 
 
