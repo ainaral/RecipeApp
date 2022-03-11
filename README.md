@@ -26,6 +26,10 @@ This is an android app where the user can select or type the ingredients that ar
 - User will be offered with the favourites button where the users can save their favourite recipe. So, the users don't have to search for the same recipe when they open the app again.
 - Also, user will have an option to contribute to the application. The user can add or delete a recipe and the app will guide them to the recipe creation process.
 
+# Test Case Document and Javadoc
+[Java Doc](https://users.metropolia.fi/~prabind/javadoc/)
+[Test case document](https://docs.google.com/document/d/15MCwdpB8n1kPm5es9Wj7HebcLWm0WS2cjwCa80m3sRw/edit)
+
 
 # Reference
 [Android Internal Storage](https://www.youtube.com/watch?v=cGxHphBjTBk&ab_channel=slidenerd)
